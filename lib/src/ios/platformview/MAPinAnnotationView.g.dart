@@ -16,7 +16,8 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-typedef MAPinAnnotationViewCreatedCallback = void Function(MAPinAnnotationView controller);
+typedef MAPinAnnotationViewCreatedCallback = void Function(
+    MAPinAnnotationView controller);
 typedef _OnUiKitViewDispose = Future<void> Function();
 
 class MAPinAnnotationView_iOS extends StatefulWidget {
@@ -34,7 +35,8 @@ class MAPinAnnotationView_iOS extends StatefulWidget {
   final Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers;
 
   @override
-  _MAPinAnnotationView_iOSState createState() => _MAPinAnnotationView_iOSState();
+  _MAPinAnnotationView_iOSState createState() =>
+      _MAPinAnnotationView_iOSState();
 }
 
 class _MAPinAnnotationView_iOSState extends State<MAPinAnnotationView_iOS> {
@@ -42,11 +44,12 @@ class _MAPinAnnotationView_iOSState extends State<MAPinAnnotationView_iOS> {
 
   @override
   Widget build(BuildContext context) {
-    final gestureRecognizers = widget.gestureRecognizers ?? <Factory<OneSequenceGestureRecognizer>>{
-      Factory<OneSequenceGestureRecognizer>(() => EagerGestureRecognizer()),
-    };
+    final gestureRecognizers = widget.gestureRecognizers ??
+        <Factory<OneSequenceGestureRecognizer>>{
+          Factory<OneSequenceGestureRecognizer>(() => EagerGestureRecognizer()),
+        };
 
-    final messageCodec = FluttifyMessageCodec('amap_map_fluttify');
+    final messageCodec = FluttifyMessageCodec(tag: 'amap_map_fluttify');
     return UiKitView(
       viewType: 'me.yohom/MAPinAnnotationView',
       gestureRecognizers: gestureRecognizers,

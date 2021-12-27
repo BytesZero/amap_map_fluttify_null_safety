@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-class com_amap_api_maps_AMapException extends java_lang_Object  {
+class com_amap_api_maps_AMapException extends java_lang_Object {
   //region constants
   static const String name__ = 'com.amap.api.maps.AMapException';
 
@@ -21,12 +21,15 @@ class com_amap_api_maps_AMapException extends java_lang_Object  {
 
   static final String ERROR_IO = "IO 操作异常 - IOException";
   static final String ERROR_SOCKET = "socket 连接异常 - SocketException";
-  static final String ERROR_SOCKE_TIME_OUT = "socket 连接超时 - SocketTimeoutException";
-  static final String ERROR_INVALID_PARAMETER = "无效的参数 - IllegalArgumentException";
+  static final String ERROR_SOCKE_TIME_OUT =
+      "socket 连接超时 - SocketTimeoutException";
+  static final String ERROR_INVALID_PARAMETER =
+      "无效的参数 - IllegalArgumentException";
   static final String ERROR_NULL_PARAMETER = "空指针异常 - NullPointException";
   static final String ERROR_URL = "url异常 - MalformedURLException";
   static final String ERROR_UNKNOW_HOST = "未知主机 - UnKnowHostException";
-  static final String ERROR_UNKNOW_SERVICE = "服务器连接失败 - UnknownServiceException";
+  static final String ERROR_UNKNOW_SERVICE =
+      "服务器连接失败 - UnknownServiceException";
   static final String ERROR_PROTOCOL = "协议解析错误 - ProtocolException";
   static final String ERROR_CONNECTION = "http连接失败 - ConnectionException";
   static final String ERROR_UNKNOWN = "未知的错误";
@@ -40,63 +43,91 @@ class com_amap_api_maps_AMapException extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_maps_AMapException> create__String(String var1) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_AMapException__String', {"var1": var1});
+  static Future<com_amap_api_maps_AMapException> create__String(
+      String var1) async {
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::createcom_amap_api_maps_AMapException__String',
+            {"var1": var1});
     final object = com_amap_api_maps_AMapException()..refId = refId;
     return object;
   }
-  
+
   static Future<com_amap_api_maps_AMapException> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_AMapException__', );
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      'ObjectFactory::createcom_amap_api_maps_AMapException__',
+    );
     final object = com_amap_api_maps_AMapException()..refId = refId;
     return object;
   }
-  
-  static Future<List<com_amap_api_maps_AMapException>> create_batch__String(List<String> var1) async {
+
+  static Future<List<com_amap_api_maps_AMapException>> create_batch__String(
+      List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_AMapException__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
-  
-    final List<com_amap_api_maps_AMapException> typedResult = resultBatch.map((result) => com_amap_api_maps_AMapException()..refId = result).toList();
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::create_batchcom_amap_api_maps_AMapException__String',
+            [
+          for (int __i__ = 0; __i__ < var1.length; __i__++)
+            {"var1": var1[__i__]}
+        ]);
+
+    final List<com_amap_api_maps_AMapException> typedResult = resultBatch
+        .map((result) => com_amap_api_maps_AMapException()..refId = result)
+        .toList();
     return typedResult;
   }
-  
-  static Future<List<com_amap_api_maps_AMapException>> create_batch__(int length) async {
+
+  static Future<List<com_amap_api_maps_AMapException>> create_batch__(
+      int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_AMapException__', {'length': length});
-  
-    final List<com_amap_api_maps_AMapException> typedResult = resultBatch.map((result) => com_amap_api_maps_AMapException()..refId = result).toList();
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::create_batchcom_amap_api_maps_AMapException__',
+            {'length': length});
+
+    final List<com_amap_api_maps_AMapException> typedResult = resultBatch
+        .map((result) => com_amap_api_maps_AMapException()..refId = result)
+        .toList();
     return typedResult;
   }
-  
+
   //endregion
 
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
+
   Future<String> getErrorMessage() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.AMapException@$refId::getErrorMessage([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.AMapException@$refId::getErrorMessage([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapException::getErrorMessage', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.AMapException::getErrorMessage',
+            {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -105,7 +136,7 @@ class com_amap_api_maps_AMapException extends java_lang_Object  {
       return __return__;
     }
   }
-  
+
   //endregion
 
   @override
@@ -114,34 +145,42 @@ class com_amap_api_maps_AMapException extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_maps_AMapException_Batch on List<com_amap_api_maps_AMapException> {
+extension com_amap_api_maps_AMapException_Batch
+    on List<com_amap_api_maps_AMapException> {
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
+
   Future<List<String>> getErrorMessage_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapException::getErrorMessage_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.AMapException::getErrorMessage_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
+
   //endregion
 }

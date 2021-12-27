@@ -12,219 +12,248 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-class com_amap_api_maps_model_CircleOptions extends com_amap_api_maps_model_BaseOptions with android_os_Parcelable {
+class com_amap_api_maps_model_CircleOptions
+    extends com_amap_api_maps_model_BaseOptions with android_os_Parcelable {
   //region constants
   static const String name__ = 'com.amap.api.maps.model.CircleOptions';
 
   @override
   final String tag__ = 'amap_map_fluttify';
 
-  
   //endregion
 
   //region creators
   static Future<com_amap_api_maps_model_CircleOptions> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_CircleOptions__', );
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      'ObjectFactory::createcom_amap_api_maps_model_CircleOptions__',
+    );
     final object = com_amap_api_maps_model_CircleOptions()..refId = refId;
     return object;
   }
-  
-  static Future<List<com_amap_api_maps_model_CircleOptions>> create_batch__(int length) async {
+
+  static Future<List<com_amap_api_maps_model_CircleOptions>> create_batch__(
+      int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_CircleOptions__', {'length': length});
-  
-    final List<com_amap_api_maps_model_CircleOptions> typedResult = resultBatch.map((result) => com_amap_api_maps_model_CircleOptions()..refId = result).toList();
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::create_batchcom_amap_api_maps_model_CircleOptions__',
+            {'length': length});
+
+    final List<com_amap_api_maps_model_CircleOptions> typedResult = resultBatch
+        .map(
+            (result) => com_amap_api_maps_model_CircleOptions()..refId = result)
+        .toList();
     return typedResult;
   }
-  
+
   //endregion
 
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
-  Future<com_amap_api_maps_model_CircleOptions> center(com_amap_api_maps_model_LatLng var1) async {
+
+  Future<com_amap_api_maps_model_CircleOptions> center(
+      com_amap_api_maps_model_LatLng var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::center([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::center([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::center', {"var1": var1, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::center',
+            {"var1": var1, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_CircleOptions()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_CircleOptions()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
+
   Future<com_amap_api_maps_model_CircleOptions> radius(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::radius([\'var1\':$var1])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::radius([\'var1\':$var1])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::radius', {"var1": var1, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::radius',
+            {"var1": var1, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_CircleOptions()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_CircleOptions()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
+
   Future<com_amap_api_maps_model_CircleOptions> strokeWidth(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::strokeWidth([\'var1\':$var1])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::strokeWidth([\'var1\':$var1])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::strokeWidth', {"var1": var1, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::strokeWidth',
+            {"var1": var1, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_CircleOptions()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_CircleOptions()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
+
   Future<com_amap_api_maps_model_CircleOptions> strokeColor(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::strokeColor([\'var1\':$var1])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::strokeColor([\'var1\':$var1])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::strokeColor', {"var1": var1, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::strokeColor',
+            {"var1": var1, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_CircleOptions()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_CircleOptions()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
+
   Future<com_amap_api_maps_model_CircleOptions> fillColor(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::fillColor([\'var1\':$var1])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::fillColor([\'var1\':$var1])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::fillColor', {"var1": var1, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::fillColor',
+            {"var1": var1, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_CircleOptions()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_CircleOptions()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
+
   Future<com_amap_api_maps_model_CircleOptions> zIndex(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::zIndex([\'var1\':$var1])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::zIndex([\'var1\':$var1])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::zIndex', {"var1": var1, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::zIndex',
+            {"var1": var1, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_CircleOptions()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_CircleOptions()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
+
   Future<com_amap_api_maps_model_CircleOptions> visible(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::visible([\'var1\':$var1])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::visible([\'var1\':$var1])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::visible', {"var1": var1, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::visible',
+            {"var1": var1, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_CircleOptions()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_CircleOptions()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
+
   Future<com_amap_api_maps_model_LatLng> getCenter() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::getCenter([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::getCenter([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::getCenter', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::getCenter',
+            {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -233,21 +262,22 @@ class com_amap_api_maps_model_CircleOptions extends com_amap_api_maps_model_Base
       return __return__;
     }
   }
-  
-  
+
   Future<double> getRadius() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::getRadius([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::getRadius([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::getRadius', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::getRadius',
+            {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -256,21 +286,22 @@ class com_amap_api_maps_model_CircleOptions extends com_amap_api_maps_model_Base
       return __return__;
     }
   }
-  
-  
+
   Future<double> getStrokeWidth() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::getStrokeWidth([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::getStrokeWidth([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::getStrokeWidth', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::getStrokeWidth',
+            {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -279,21 +310,22 @@ class com_amap_api_maps_model_CircleOptions extends com_amap_api_maps_model_Base
       return __return__;
     }
   }
-  
-  
+
   Future<int> getStrokeColor() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::getStrokeColor([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::getStrokeColor([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::getStrokeColor', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::getStrokeColor',
+            {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -302,21 +334,22 @@ class com_amap_api_maps_model_CircleOptions extends com_amap_api_maps_model_Base
       return __return__;
     }
   }
-  
-  
+
   Future<int> getFillColor() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::getFillColor([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::getFillColor([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::getFillColor', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::getFillColor',
+            {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -325,21 +358,22 @@ class com_amap_api_maps_model_CircleOptions extends com_amap_api_maps_model_Base
       return __return__;
     }
   }
-  
-  
+
   Future<double> getZIndex() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::getZIndex([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::getZIndex([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::getZIndex', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::getZIndex',
+            {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -348,21 +382,22 @@ class com_amap_api_maps_model_CircleOptions extends com_amap_api_maps_model_Base
       return __return__;
     }
   }
-  
-  
+
   Future<bool> isVisible() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::isVisible([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::isVisible([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::isVisible', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::isVisible',
+            {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -371,113 +406,134 @@ class com_amap_api_maps_model_CircleOptions extends com_amap_api_maps_model_Base
       return __return__;
     }
   }
-  
-  
-  Future<com_amap_api_maps_model_CircleOptions> addHoles__com_amap_api_maps_model_BaseHoleOptions(com_amap_api_maps_model_BaseHoleOptions var1) async {
+
+  Future<com_amap_api_maps_model_CircleOptions>
+      addHoles__com_amap_api_maps_model_BaseHoleOptions(
+          com_amap_api_maps_model_BaseHoleOptions var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::addHoles([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::addHoles([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::addHoles__com_amap_api_maps_model_BaseHoleOptions', {"var1": var1, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::addHoles__com_amap_api_maps_model_BaseHoleOptions',
+            {"var1": var1, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_CircleOptions()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_CircleOptions()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
-  Future<com_amap_api_maps_model_CircleOptions> addHoles__List_com_amap_api_maps_model_BaseHoleOptions_(List<com_amap_api_maps_model_BaseHoleOptions> var1) async {
+
+  Future<com_amap_api_maps_model_CircleOptions>
+      addHoles__List_com_amap_api_maps_model_BaseHoleOptions_(
+          List<com_amap_api_maps_model_BaseHoleOptions> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::addHoles([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::addHoles([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::addHoles__List_com_amap_api_maps_model_BaseHoleOptions_', {"var1": var1, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::addHoles__List_com_amap_api_maps_model_BaseHoleOptions_',
+            {"var1": var1, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_CircleOptions()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_CircleOptions()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
+
   Future<List<com_amap_api_maps_model_BaseHoleOptions>> getHoleOptions() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::getHoleOptions([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::getHoleOptions([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::getHoleOptions', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::getHoleOptions',
+            {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_maps_model_BaseHoleOptions()..refId = __it__).toList();
+      final __return__ = (__result__ as List)
+          .cast<String>()
+          .map((__it__) =>
+              com_amap_api_maps_model_BaseHoleOptions()..refId = __it__)
+          .toList();
       return __return__;
     }
   }
-  
-  
-  Future<com_amap_api_maps_model_CircleOptions> setStrokeDottedLineType(int var1) async {
+
+  Future<com_amap_api_maps_model_CircleOptions> setStrokeDottedLineType(
+      int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::setStrokeDottedLineType([\'var1\':$var1])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::setStrokeDottedLineType([\'var1\':$var1])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::setStrokeDottedLineType', {"var1": var1, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::setStrokeDottedLineType',
+            {"var1": var1, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_CircleOptions()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_CircleOptions()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
+
   Future<int> getStrokeDottedLineType() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::getStrokeDottedLineType([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::getStrokeDottedLineType([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::getStrokeDottedLineType', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::getStrokeDottedLineType',
+            {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -486,44 +542,50 @@ class com_amap_api_maps_model_CircleOptions extends com_amap_api_maps_model_Base
       return __return__;
     }
   }
-  
-  
-  Future<com_amap_api_maps_model_CircleOptions> usePolylineStroke(bool var1) async {
+
+  Future<com_amap_api_maps_model_CircleOptions> usePolylineStroke(
+      bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::usePolylineStroke([\'var1\':$var1])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::usePolylineStroke([\'var1\':$var1])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::usePolylineStroke', {"var1": var1, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::usePolylineStroke',
+            {"var1": var1, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_CircleOptions()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_CircleOptions()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
+
   Future<bool> isUsePolylineStroke() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::isUsePolylineStroke([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.CircleOptions@$refId::isUsePolylineStroke([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::isUsePolylineStroke', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::isUsePolylineStroke',
+            {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -532,7 +594,7 @@ class com_amap_api_maps_model_CircleOptions extends com_amap_api_maps_model_Base
       return __return__;
     }
   }
-  
+
   //endregion
 
   @override
@@ -541,414 +603,584 @@ class com_amap_api_maps_model_CircleOptions extends com_amap_api_maps_model_Base
   }
 }
 
-extension com_amap_api_maps_model_CircleOptions_Batch on List<com_amap_api_maps_model_CircleOptions> {
+extension com_amap_api_maps_model_CircleOptions_Batch
+    on List<com_amap_api_maps_model_CircleOptions> {
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
-  Future<List<com_amap_api_maps_model_CircleOptions>> center_batch(List<com_amap_api_maps_model_LatLng> var1) async {
+
+  Future<List<com_amap_api_maps_model_CircleOptions>> center_batch(
+      List<com_amap_api_maps_model_LatLng> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::center_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::center_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++)
+        {"var1": var1[__i__], "__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_CircleOptions()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_CircleOptions()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  Future<List<com_amap_api_maps_model_CircleOptions>> radius_batch(List<double> var1) async {
+
+  Future<List<com_amap_api_maps_model_CircleOptions>> radius_batch(
+      List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::radius_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::radius_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++)
+        {"var1": var1[__i__], "__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_CircleOptions()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_CircleOptions()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  Future<List<com_amap_api_maps_model_CircleOptions>> strokeWidth_batch(List<double> var1) async {
+
+  Future<List<com_amap_api_maps_model_CircleOptions>> strokeWidth_batch(
+      List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::strokeWidth_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::strokeWidth_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++)
+        {"var1": var1[__i__], "__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_CircleOptions()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_CircleOptions()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  Future<List<com_amap_api_maps_model_CircleOptions>> strokeColor_batch(List<int> var1) async {
+
+  Future<List<com_amap_api_maps_model_CircleOptions>> strokeColor_batch(
+      List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::strokeColor_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::strokeColor_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++)
+        {"var1": var1[__i__], "__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_CircleOptions()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_CircleOptions()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  Future<List<com_amap_api_maps_model_CircleOptions>> fillColor_batch(List<int> var1) async {
+
+  Future<List<com_amap_api_maps_model_CircleOptions>> fillColor_batch(
+      List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::fillColor_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::fillColor_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++)
+        {"var1": var1[__i__], "__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_CircleOptions()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_CircleOptions()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  Future<List<com_amap_api_maps_model_CircleOptions>> zIndex_batch(List<double> var1) async {
+
+  Future<List<com_amap_api_maps_model_CircleOptions>> zIndex_batch(
+      List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::zIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::zIndex_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++)
+        {"var1": var1[__i__], "__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_CircleOptions()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_CircleOptions()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  Future<List<com_amap_api_maps_model_CircleOptions>> visible_batch(List<bool> var1) async {
+
+  Future<List<com_amap_api_maps_model_CircleOptions>> visible_batch(
+      List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::visible_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.CircleOptions::visible_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++)
+        {"var1": var1[__i__], "__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_CircleOptions()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_CircleOptions()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   Future<List<com_amap_api_maps_model_LatLng>> getCenter_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::getCenter_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::getCenter_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_LatLng()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_LatLng()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   Future<List<double>> getRadius_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::getRadius_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::getRadius_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<double>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   Future<List<double>> getStrokeWidth_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::getStrokeWidth_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::getStrokeWidth_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<double>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   Future<List<int>> getStrokeColor_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::getStrokeColor_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::getStrokeColor_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<int>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   Future<List<int>> getFillColor_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::getFillColor_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::getFillColor_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<int>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   Future<List<double>> getZIndex_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::getZIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::getZIndex_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<double>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   Future<List<bool>> isVisible_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::isVisible_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::isVisible_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<bool>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  Future<List<com_amap_api_maps_model_CircleOptions>> addHoles__com_amap_api_maps_model_BaseHoleOptions_batch(List<com_amap_api_maps_model_BaseHoleOptions> var1) async {
+
+  Future<List<com_amap_api_maps_model_CircleOptions>>
+      addHoles__com_amap_api_maps_model_BaseHoleOptions_batch(
+          List<com_amap_api_maps_model_BaseHoleOptions> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::addHoles__com_amap_api_maps_model_BaseHoleOptions_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::addHoles__com_amap_api_maps_model_BaseHoleOptions_batch',
+            [
+          for (int __i__ = 0; __i__ < length; __i__++)
+            {"var1": var1[__i__], "__this__": this[__i__]}
+        ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_CircleOptions()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_CircleOptions()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  Future<List<com_amap_api_maps_model_CircleOptions>> addHoles__List_com_amap_api_maps_model_BaseHoleOptions__batch(List<List<com_amap_api_maps_model_BaseHoleOptions>> var1) async {
+
+  Future<List<com_amap_api_maps_model_CircleOptions>>
+      addHoles__List_com_amap_api_maps_model_BaseHoleOptions__batch(
+          List<List<com_amap_api_maps_model_BaseHoleOptions>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::addHoles__List_com_amap_api_maps_model_BaseHoleOptions__batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::addHoles__List_com_amap_api_maps_model_BaseHoleOptions__batch',
+            [
+          for (int __i__ = 0; __i__ < length; __i__++)
+            {"var1": var1[__i__], "__this__": this[__i__]}
+        ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_CircleOptions()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_CircleOptions()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  Future<List<List<com_amap_api_maps_model_BaseHoleOptions>>> getHoleOptions_batch() async {
+
+  Future<List<List<com_amap_api_maps_model_BaseHoleOptions>>>
+      getHoleOptions_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::getHoleOptions_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::getHoleOptions_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_maps_model_BaseHoleOptions()..refId = __it__).toList()).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => (__result__ as List)
+              .cast<String>()
+              .map((__it__) =>
+                  com_amap_api_maps_model_BaseHoleOptions()..refId = __it__)
+              .toList())
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  Future<List<com_amap_api_maps_model_CircleOptions>> setStrokeDottedLineType_batch(List<int> var1) async {
+
+  Future<List<com_amap_api_maps_model_CircleOptions>>
+      setStrokeDottedLineType_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::setStrokeDottedLineType_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::setStrokeDottedLineType_batch',
+            [
+          for (int __i__ = 0; __i__ < length; __i__++)
+            {"var1": var1[__i__], "__this__": this[__i__]}
+        ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_CircleOptions()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_CircleOptions()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   Future<List<int>> getStrokeDottedLineType_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::getStrokeDottedLineType_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::getStrokeDottedLineType_batch',
+            [
+          for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+        ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<int>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  Future<List<com_amap_api_maps_model_CircleOptions>> usePolylineStroke_batch(List<bool> var1) async {
+
+  Future<List<com_amap_api_maps_model_CircleOptions>> usePolylineStroke_batch(
+      List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::usePolylineStroke_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::usePolylineStroke_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++)
+        {"var1": var1[__i__], "__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_CircleOptions()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_CircleOptions()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   Future<List<bool>> isUsePolylineStroke_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.CircleOptions::isUsePolylineStroke_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.CircleOptions::isUsePolylineStroke_batch',
+            [
+          for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+        ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<bool>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
+
   //endregion
 }

@@ -12,34 +12,32 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-class _com_amap_api_maps_AMap_InfoWindowAdapter_SUB extends java_lang_Object with com_amap_api_maps_AMap_InfoWindowAdapter {}
+class _com_amap_api_maps_AMap_InfoWindowAdapter_SUB extends java_lang_Object
+    with com_amap_api_maps_AMap_InfoWindowAdapter {}
 
 mixin com_amap_api_maps_AMap_InfoWindowAdapter on java_lang_Object {
-  
-
-  static com_amap_api_maps_AMap_InfoWindowAdapter subInstance() => _com_amap_api_maps_AMap_InfoWindowAdapter_SUB();
+  static com_amap_api_maps_AMap_InfoWindowAdapter subInstance() =>
+      _com_amap_api_maps_AMap_InfoWindowAdapter_SUB();
 
   @override
   final String tag__ = 'amap_map_fluttify';
 
-  
-
-  
-
-  
-  Future<android_view_View> getInfoWindow(com_amap_api_maps_model_Marker var1) async {
+  Future<android_view_View> getInfoWindow(
+      com_amap_api_maps_model_Marker var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.AMap.InfoWindowAdapter@$refId::getInfoWindow([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.AMap.InfoWindowAdapter@$refId::getInfoWindow([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMap.InfoWindowAdapter::getInfoWindow', {"var1": var1, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.AMap.InfoWindowAdapter::getInfoWindow',
+            {"var1": var1, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -48,21 +46,24 @@ mixin com_amap_api_maps_AMap_InfoWindowAdapter on java_lang_Object {
       return __return__;
     }
   }
-  
-  
-  Future<android_view_View> getInfoContents(com_amap_api_maps_model_Marker var1) async {
+
+  Future<android_view_View> getInfoContents(
+      com_amap_api_maps_model_Marker var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.AMap.InfoWindowAdapter@$refId::getInfoContents([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.AMap.InfoWindowAdapter@$refId::getInfoContents([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMap.InfoWindowAdapter::getInfoContents', {"var1": var1, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.AMap.InfoWindowAdapter::getInfoContents',
+            {"var1": var1, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -71,48 +72,65 @@ mixin com_amap_api_maps_AMap_InfoWindowAdapter on java_lang_Object {
       return __return__;
     }
   }
-  
 }
 
-extension com_amap_api_maps_AMap_InfoWindowAdapter_Batch on List<com_amap_api_maps_AMap_InfoWindowAdapter> {
+extension com_amap_api_maps_AMap_InfoWindowAdapter_Batch
+    on List<com_amap_api_maps_AMap_InfoWindowAdapter> {
   //region methods
-  
-  Future<List<android_view_View>> getInfoWindow_batch(List<com_amap_api_maps_model_Marker> var1) async {
+
+  Future<List<android_view_View>> getInfoWindow_batch(
+      List<com_amap_api_maps_model_Marker> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMap.InfoWindowAdapter::getInfoWindow_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.AMap.InfoWindowAdapter::getInfoWindow_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++)
+        {"var1": var1[__i__], "__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => android_view_View()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => android_view_View()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  Future<List<android_view_View>> getInfoContents_batch(List<com_amap_api_maps_model_Marker> var1) async {
+
+  Future<List<android_view_View>> getInfoContents_batch(
+      List<com_amap_api_maps_model_Marker> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMap.InfoWindowAdapter::getInfoContents_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.AMap.InfoWindowAdapter::getInfoContents_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++)
+        {"var1": var1[__i__], "__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => android_view_View()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => android_view_View()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
+
   //endregion
 }

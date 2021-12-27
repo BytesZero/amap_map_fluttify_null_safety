@@ -42,11 +42,12 @@ class _MAMapView_iOSState extends State<MAMapView_iOS> {
 
   @override
   Widget build(BuildContext context) {
-    final gestureRecognizers = widget.gestureRecognizers ?? <Factory<OneSequenceGestureRecognizer>>{
-      Factory<OneSequenceGestureRecognizer>(() => EagerGestureRecognizer()),
-    };
+    final gestureRecognizers = widget.gestureRecognizers ??
+        <Factory<OneSequenceGestureRecognizer>>{
+          Factory<OneSequenceGestureRecognizer>(() => EagerGestureRecognizer()),
+        };
 
-    final messageCodec = FluttifyMessageCodec('amap_map_fluttify');
+    final messageCodec = FluttifyMessageCodec(tag: 'amap_map_fluttify');
     return UiKitView(
       viewType: 'me.yohom/MAMapView',
       gestureRecognizers: gestureRecognizers,

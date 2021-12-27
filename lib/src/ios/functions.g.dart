@@ -16,15 +16,17 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
 Future<MAPathShowRange> MAPathShowRangeMake(double begin, double end) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAPathShowRangeMake::MAPathShowRangeMake([\'begin\':$begin, \'end\':$end])');
+    debugPrint(
+        'fluttify-dart: MAPathShowRangeMake::MAPathShowRangeMake([\'begin\':$begin, \'end\':$end])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPathShowRangeMake::MAPathShowRangeMake', {"begin": begin, "end": end});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAPathShowRangeMake::MAPathShowRangeMake',
+          {"begin": begin, "end": end});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -34,18 +36,21 @@ Future<MAPathShowRange> MAPathShowRangeMake(double begin, double end) async {
   }
 }
 
-Future<MACoordinateBounds> MACoordinateBoundsMake(CLLocationCoordinate2D northEast, CLLocationCoordinate2D southWest) async {
+Future<MACoordinateBounds> MACoordinateBoundsMake(
+    CLLocationCoordinate2D northEast, CLLocationCoordinate2D southWest) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MACoordinateBoundsMake::MACoordinateBoundsMake([])');
+    debugPrint(
+        'fluttify-dart: MACoordinateBoundsMake::MACoordinateBoundsMake([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MACoordinateBoundsMake::MACoordinateBoundsMake', {"northEast": northEast, "southWest": southWest});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MACoordinateBoundsMake::MACoordinateBoundsMake',
+          {"northEast": northEast, "southWest": southWest});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -55,18 +60,21 @@ Future<MACoordinateBounds> MACoordinateBoundsMake(CLLocationCoordinate2D northEa
   }
 }
 
-Future<MACoordinateSpan> MACoordinateSpanMake(double latitudeDelta, double longitudeDelta) async {
+Future<MACoordinateSpan> MACoordinateSpanMake(
+    double latitudeDelta, double longitudeDelta) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MACoordinateSpanMake::MACoordinateSpanMake([\'latitudeDelta\':$latitudeDelta, \'longitudeDelta\':$longitudeDelta])');
+    debugPrint(
+        'fluttify-dart: MACoordinateSpanMake::MACoordinateSpanMake([\'latitudeDelta\':$latitudeDelta, \'longitudeDelta\':$longitudeDelta])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MACoordinateSpanMake::MACoordinateSpanMake', {"latitudeDelta": latitudeDelta, "longitudeDelta": longitudeDelta});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MACoordinateSpanMake::MACoordinateSpanMake',
+          {"latitudeDelta": latitudeDelta, "longitudeDelta": longitudeDelta});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -76,18 +84,21 @@ Future<MACoordinateSpan> MACoordinateSpanMake(double latitudeDelta, double longi
   }
 }
 
-Future<MACoordinateRegion> MACoordinateRegionMake(CLLocationCoordinate2D centerCoordinate, MACoordinateSpan span) async {
+Future<MACoordinateRegion> MACoordinateRegionMake(
+    CLLocationCoordinate2D centerCoordinate, MACoordinateSpan span) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MACoordinateRegionMake::MACoordinateRegionMake([])');
+    debugPrint(
+        'fluttify-dart: MACoordinateRegionMake::MACoordinateRegionMake([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MACoordinateRegionMake::MACoordinateRegionMake', {"centerCoordinate": centerCoordinate, "span": span});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MACoordinateRegionMake::MACoordinateRegionMake',
+          {"centerCoordinate": centerCoordinate, "span": span});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -97,18 +108,28 @@ Future<MACoordinateRegion> MACoordinateRegionMake(CLLocationCoordinate2D centerC
   }
 }
 
-Future<MACoordinateRegion> MACoordinateRegionMakeWithDistance(CLLocationCoordinate2D centerCoordinate, double latitudinalMeters, double longitudinalMeters) async {
+Future<MACoordinateRegion> MACoordinateRegionMakeWithDistance(
+    CLLocationCoordinate2D centerCoordinate,
+    double latitudinalMeters,
+    double longitudinalMeters) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MACoordinateRegionMakeWithDistance::MACoordinateRegionMakeWithDistance([\'latitudinalMeters\':$latitudinalMeters, \'longitudinalMeters\':$longitudinalMeters])');
+    debugPrint(
+        'fluttify-dart: MACoordinateRegionMakeWithDistance::MACoordinateRegionMakeWithDistance([\'latitudinalMeters\':$latitudinalMeters, \'longitudinalMeters\':$longitudinalMeters])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MACoordinateRegionMakeWithDistance::MACoordinateRegionMakeWithDistance', {"centerCoordinate": centerCoordinate, "latitudinalMeters": latitudinalMeters, "longitudinalMeters": longitudinalMeters});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod(
+          'MACoordinateRegionMakeWithDistance::MACoordinateRegionMakeWithDistance',
+          {
+        "centerCoordinate": centerCoordinate,
+        "latitudinalMeters": latitudinalMeters,
+        "longitudinalMeters": longitudinalMeters
+      });
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -118,18 +139,21 @@ Future<MACoordinateRegion> MACoordinateRegionMakeWithDistance(CLLocationCoordina
   }
 }
 
-Future<MAMapPoint> MAMapPointForCoordinate(CLLocationCoordinate2D coordinate) async {
+Future<MAMapPoint> MAMapPointForCoordinate(
+    CLLocationCoordinate2D coordinate) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAMapPointForCoordinate::MAMapPointForCoordinate([])');
+    debugPrint(
+        'fluttify-dart: MAMapPointForCoordinate::MAMapPointForCoordinate([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapPointForCoordinate::MAMapPointForCoordinate', {"coordinate": coordinate});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapPointForCoordinate::MAMapPointForCoordinate',
+          {"coordinate": coordinate});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -139,18 +163,21 @@ Future<MAMapPoint> MAMapPointForCoordinate(CLLocationCoordinate2D coordinate) as
   }
 }
 
-Future<CLLocationCoordinate2D> MACoordinateForMapPoint(MAMapPoint mapPoint) async {
+Future<CLLocationCoordinate2D> MACoordinateForMapPoint(
+    MAMapPoint mapPoint) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MACoordinateForMapPoint::MACoordinateForMapPoint([])');
+    debugPrint(
+        'fluttify-dart: MACoordinateForMapPoint::MACoordinateForMapPoint([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MACoordinateForMapPoint::MACoordinateForMapPoint', {"mapPoint": mapPoint});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MACoordinateForMapPoint::MACoordinateForMapPoint',
+          {"mapPoint": mapPoint});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -163,15 +190,18 @@ Future<CLLocationCoordinate2D> MACoordinateForMapPoint(MAMapPoint mapPoint) asyn
 Future<MACoordinateRegion> MACoordinateRegionForMapRect(MAMapRect rect) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MACoordinateRegionForMapRect::MACoordinateRegionForMapRect([])');
+    debugPrint(
+        'fluttify-dart: MACoordinateRegionForMapRect::MACoordinateRegionForMapRect([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MACoordinateRegionForMapRect::MACoordinateRegionForMapRect', {"rect": rect});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod(
+          'MACoordinateRegionForMapRect::MACoordinateRegionForMapRect',
+          {"rect": rect});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -181,18 +211,22 @@ Future<MACoordinateRegion> MACoordinateRegionForMapRect(MAMapRect rect) async {
   }
 }
 
-Future<MAMapRect> MAMapRectForCoordinateRegion(MACoordinateRegion region) async {
+Future<MAMapRect> MAMapRectForCoordinateRegion(
+    MACoordinateRegion region) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAMapRectForCoordinateRegion::MAMapRectForCoordinateRegion([])');
+    debugPrint(
+        'fluttify-dart: MAMapRectForCoordinateRegion::MAMapRectForCoordinateRegion([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectForCoordinateRegion::MAMapRectForCoordinateRegion', {"region": region});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod(
+          'MAMapRectForCoordinateRegion::MAMapRectForCoordinateRegion',
+          {"region": region});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -205,15 +239,18 @@ Future<MAMapRect> MAMapRectForCoordinateRegion(MACoordinateRegion region) async 
 Future<double> MAMetersPerMapPointAtLatitude(double latitude) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAMetersPerMapPointAtLatitude::MAMetersPerMapPointAtLatitude([\'latitude\':$latitude])');
+    debugPrint(
+        'fluttify-dart: MAMetersPerMapPointAtLatitude::MAMetersPerMapPointAtLatitude([\'latitude\':$latitude])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMetersPerMapPointAtLatitude::MAMetersPerMapPointAtLatitude', {"latitude": latitude});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod(
+          'MAMetersPerMapPointAtLatitude::MAMetersPerMapPointAtLatitude',
+          {"latitude": latitude});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -226,15 +263,18 @@ Future<double> MAMetersPerMapPointAtLatitude(double latitude) async {
 Future<double> MAMapPointsPerMeterAtLatitude(double latitude) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAMapPointsPerMeterAtLatitude::MAMapPointsPerMeterAtLatitude([\'latitude\':$latitude])');
+    debugPrint(
+        'fluttify-dart: MAMapPointsPerMeterAtLatitude::MAMapPointsPerMeterAtLatitude([\'latitude\':$latitude])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapPointsPerMeterAtLatitude::MAMapPointsPerMeterAtLatitude', {"latitude": latitude});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod(
+          'MAMapPointsPerMeterAtLatitude::MAMapPointsPerMeterAtLatitude',
+          {"latitude": latitude});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -247,15 +287,17 @@ Future<double> MAMapPointsPerMeterAtLatitude(double latitude) async {
 Future<double> MAMetersBetweenMapPoints(MAMapPoint a, MAMapPoint b) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAMetersBetweenMapPoints::MAMetersBetweenMapPoints([])');
+    debugPrint(
+        'fluttify-dart: MAMetersBetweenMapPoints::MAMetersBetweenMapPoints([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMetersBetweenMapPoints::MAMetersBetweenMapPoints', {"a": a, "b": b});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMetersBetweenMapPoints::MAMetersBetweenMapPoints',
+          {"a": a, "b": b});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -265,18 +307,21 @@ Future<double> MAMetersBetweenMapPoints(MAMapPoint a, MAMapPoint b) async {
   }
 }
 
-Future<double> MAAreaBetweenCoordinates(CLLocationCoordinate2D northEast, CLLocationCoordinate2D southWest) async {
+Future<double> MAAreaBetweenCoordinates(
+    CLLocationCoordinate2D northEast, CLLocationCoordinate2D southWest) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAAreaBetweenCoordinates::MAAreaBetweenCoordinates([])');
+    debugPrint(
+        'fluttify-dart: MAAreaBetweenCoordinates::MAAreaBetweenCoordinates([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAreaBetweenCoordinates::MAAreaBetweenCoordinates', {"northEast": northEast, "southWest": southWest});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAAreaBetweenCoordinates::MAAreaBetweenCoordinates',
+          {"northEast": northEast, "southWest": southWest});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -289,15 +334,17 @@ Future<double> MAAreaBetweenCoordinates(CLLocationCoordinate2D northEast, CLLoca
 Future<MAMapRect> MAMapRectInset(MAMapRect rect, double dx, double dy) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAMapRectInset::MAMapRectInset([\'dx\':$dx, \'dy\':$dy])');
+    debugPrint(
+        'fluttify-dart: MAMapRectInset::MAMapRectInset([\'dx\':$dx, \'dy\':$dy])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectInset::MAMapRectInset', {"rect": rect, "dx": dx, "dy": dy});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod(
+          'MAMapRectInset::MAMapRectInset', {"rect": rect, "dx": dx, "dy": dy});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -314,11 +361,12 @@ Future<MAMapRect> MAMapRectUnion(MAMapRect rect1, MAMapRect rect2) async {
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectUnion::MAMapRectUnion', {"rect1": rect1, "rect2": rect2});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod(
+          'MAMapRectUnion::MAMapRectUnion', {"rect1": rect1, "rect2": rect2});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -331,15 +379,17 @@ Future<MAMapRect> MAMapRectUnion(MAMapRect rect1, MAMapRect rect2) async {
 Future<bool> MAMapSizeContainsSize(MAMapSize size1, MAMapSize size2) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAMapSizeContainsSize::MAMapSizeContainsSize([])');
+    debugPrint(
+        'fluttify-dart: MAMapSizeContainsSize::MAMapSizeContainsSize([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapSizeContainsSize::MAMapSizeContainsSize', {"size1": size1, "size2": size2});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapSizeContainsSize::MAMapSizeContainsSize',
+          {"size1": size1, "size2": size2});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -352,15 +402,17 @@ Future<bool> MAMapSizeContainsSize(MAMapSize size1, MAMapSize size2) async {
 Future<bool> MAMapRectContainsPoint(MAMapRect rect, MAMapPoint point) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAMapRectContainsPoint::MAMapRectContainsPoint([])');
+    debugPrint(
+        'fluttify-dart: MAMapRectContainsPoint::MAMapRectContainsPoint([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectContainsPoint::MAMapRectContainsPoint', {"rect": rect, "point": point});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapRectContainsPoint::MAMapRectContainsPoint',
+          {"rect": rect, "point": point});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -373,15 +425,17 @@ Future<bool> MAMapRectContainsPoint(MAMapRect rect, MAMapPoint point) async {
 Future<bool> MAMapRectIntersectsRect(MAMapRect rect1, MAMapRect rect2) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAMapRectIntersectsRect::MAMapRectIntersectsRect([])');
+    debugPrint(
+        'fluttify-dart: MAMapRectIntersectsRect::MAMapRectIntersectsRect([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectIntersectsRect::MAMapRectIntersectsRect', {"rect1": rect1, "rect2": rect2});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapRectIntersectsRect::MAMapRectIntersectsRect',
+          {"rect1": rect1, "rect2": rect2});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -394,15 +448,17 @@ Future<bool> MAMapRectIntersectsRect(MAMapRect rect1, MAMapRect rect2) async {
 Future<bool> MAMapRectContainsRect(MAMapRect rect1, MAMapRect rect2) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAMapRectContainsRect::MAMapRectContainsRect([])');
+    debugPrint(
+        'fluttify-dart: MAMapRectContainsRect::MAMapRectContainsRect([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectContainsRect::MAMapRectContainsRect', {"rect1": rect1, "rect2": rect2});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapRectContainsRect::MAMapRectContainsRect',
+          {"rect1": rect1, "rect2": rect2});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -412,18 +468,21 @@ Future<bool> MAMapRectContainsRect(MAMapRect rect1, MAMapRect rect2) async {
   }
 }
 
-Future<bool> MACircleContainsPoint(MAMapPoint point, MAMapPoint center, double radius) async {
+Future<bool> MACircleContainsPoint(
+    MAMapPoint point, MAMapPoint center, double radius) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MACircleContainsPoint::MACircleContainsPoint([\'radius\':$radius])');
+    debugPrint(
+        'fluttify-dart: MACircleContainsPoint::MACircleContainsPoint([\'radius\':$radius])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MACircleContainsPoint::MACircleContainsPoint', {"point": point, "center": center, "radius": radius});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MACircleContainsPoint::MACircleContainsPoint',
+          {"point": point, "center": center, "radius": radius});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -433,18 +492,21 @@ Future<bool> MACircleContainsPoint(MAMapPoint point, MAMapPoint center, double r
   }
 }
 
-Future<bool> MACircleContainsCoordinate(CLLocationCoordinate2D point, CLLocationCoordinate2D center, double radius) async {
+Future<bool> MACircleContainsCoordinate(CLLocationCoordinate2D point,
+    CLLocationCoordinate2D center, double radius) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MACircleContainsCoordinate::MACircleContainsCoordinate([\'radius\':$radius])');
+    debugPrint(
+        'fluttify-dart: MACircleContainsCoordinate::MACircleContainsCoordinate([\'radius\':$radius])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MACircleContainsCoordinate::MACircleContainsCoordinate', {"point": point, "center": center, "radius": radius});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MACircleContainsCoordinate::MACircleContainsCoordinate',
+          {"point": point, "center": center, "radius": radius});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -454,18 +516,22 @@ Future<bool> MACircleContainsCoordinate(CLLocationCoordinate2D point, CLLocation
   }
 }
 
-Future<MAMapPoint> MAGetNearestMapPointFromPolyline(MAMapPoint point, List<MAMapPoint> polyline, int count) async {
+Future<MAMapPoint> MAGetNearestMapPointFromPolyline(
+    MAMapPoint point, List<MAMapPoint> polyline, int count) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAGetNearestMapPointFromPolyline::MAGetNearestMapPointFromPolyline([\'count\':$count])');
+    debugPrint(
+        'fluttify-dart: MAGetNearestMapPointFromPolyline::MAGetNearestMapPointFromPolyline([\'count\':$count])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAGetNearestMapPointFromPolyline::MAGetNearestMapPointFromPolyline', {"point": point, "polyline": polyline, "count": count});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod(
+          'MAGetNearestMapPointFromPolyline::MAGetNearestMapPointFromPolyline',
+          {"point": point, "polyline": polyline, "count": count});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -475,18 +541,21 @@ Future<MAMapPoint> MAGetNearestMapPointFromPolyline(MAMapPoint point, List<MAMap
   }
 }
 
-Future<bool> MAPolygonContainsPoint(MAMapPoint point, List<MAMapPoint> polygon, int count) async {
+Future<bool> MAPolygonContainsPoint(
+    MAMapPoint point, List<MAMapPoint> polygon, int count) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAPolygonContainsPoint::MAPolygonContainsPoint([\'count\':$count])');
+    debugPrint(
+        'fluttify-dart: MAPolygonContainsPoint::MAPolygonContainsPoint([\'count\':$count])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolygonContainsPoint::MAPolygonContainsPoint', {"point": point, "polygon": polygon, "count": count});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAPolygonContainsPoint::MAPolygonContainsPoint',
+          {"point": point, "polygon": polygon, "count": count});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -496,18 +565,21 @@ Future<bool> MAPolygonContainsPoint(MAMapPoint point, List<MAMapPoint> polygon, 
   }
 }
 
-Future<bool> MAPolygonContainsCoordinate(CLLocationCoordinate2D point, List<CLLocationCoordinate2D> polygon, int count) async {
+Future<bool> MAPolygonContainsCoordinate(CLLocationCoordinate2D point,
+    List<CLLocationCoordinate2D> polygon, int count) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAPolygonContainsCoordinate::MAPolygonContainsCoordinate([\'count\':$count])');
+    debugPrint(
+        'fluttify-dart: MAPolygonContainsCoordinate::MAPolygonContainsCoordinate([\'count\':$count])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolygonContainsCoordinate::MAPolygonContainsCoordinate', {"point": point, "polygon": polygon, "count": count});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAPolygonContainsCoordinate::MAPolygonContainsCoordinate',
+          {"point": point, "polygon": polygon, "count": count});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -517,18 +589,22 @@ Future<bool> MAPolygonContainsCoordinate(CLLocationCoordinate2D point, List<CLLo
   }
 }
 
-Future<MAMapPoint> MAGetNearestMapPointFromLine(MAMapPoint lineStart, MAMapPoint lineEnd, MAMapPoint point) async {
+Future<MAMapPoint> MAGetNearestMapPointFromLine(
+    MAMapPoint lineStart, MAMapPoint lineEnd, MAMapPoint point) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAGetNearestMapPointFromLine::MAGetNearestMapPointFromLine([])');
+    debugPrint(
+        'fluttify-dart: MAGetNearestMapPointFromLine::MAGetNearestMapPointFromLine([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAGetNearestMapPointFromLine::MAGetNearestMapPointFromLine', {"lineStart": lineStart, "lineEnd": lineEnd, "point": point});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod(
+          'MAGetNearestMapPointFromLine::MAGetNearestMapPointFromLine',
+          {"lineStart": lineStart, "lineEnd": lineEnd, "point": point});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -538,18 +614,21 @@ Future<MAMapPoint> MAGetNearestMapPointFromLine(MAMapPoint lineStart, MAMapPoint
   }
 }
 
-Future<double> MAAreaForPolygon(List<CLLocationCoordinate2D> coordinates, int count) async {
+Future<double> MAAreaForPolygon(
+    List<CLLocationCoordinate2D> coordinates, int count) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAAreaForPolygon::MAAreaForPolygon([\'count\':$count])');
+    debugPrint(
+        'fluttify-dart: MAAreaForPolygon::MAAreaForPolygon([\'count\':$count])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAreaForPolygon::MAAreaForPolygon', {"coordinates": coordinates, "count": count});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAAreaForPolygon::MAAreaForPolygon',
+          {"coordinates": coordinates, "count": count});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -562,15 +641,16 @@ Future<double> MAAreaForPolygon(List<CLLocationCoordinate2D> coordinates, int co
 Future<MAMapPoint> MAMapPointMake(double x, double y) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAMapPointMake::MAMapPointMake([\'x\':$x, \'y\':$y])');
+    debugPrint(
+        'fluttify-dart: MAMapPointMake::MAMapPointMake([\'x\':$x, \'y\':$y])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapPointMake::MAMapPointMake', {"x": x, "y": y});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapPointMake::MAMapPointMake', {"x": x, "y": y});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -583,15 +663,17 @@ Future<MAMapPoint> MAMapPointMake(double x, double y) async {
 Future<MAMapSize> MAMapSizeMake(double width, double height) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAMapSizeMake::MAMapSizeMake([\'width\':$width, \'height\':$height])');
+    debugPrint(
+        'fluttify-dart: MAMapSizeMake::MAMapSizeMake([\'width\':$width, \'height\':$height])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapSizeMake::MAMapSizeMake', {"width": width, "height": height});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod(
+          'MAMapSizeMake::MAMapSizeMake', {"width": width, "height": height});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -601,18 +683,21 @@ Future<MAMapSize> MAMapSizeMake(double width, double height) async {
   }
 }
 
-Future<MAMapRect> MAMapRectMake(double x, double y, double width, double height) async {
+Future<MAMapRect> MAMapRectMake(
+    double x, double y, double width, double height) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAMapRectMake::MAMapRectMake([\'x\':$x, \'y\':$y, \'width\':$width, \'height\':$height])');
+    debugPrint(
+        'fluttify-dart: MAMapRectMake::MAMapRectMake([\'x\':$x, \'y\':$y, \'width\':$width, \'height\':$height])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectMake::MAMapRectMake', {"x": x, "y": y, "width": width, "height": height});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapRectMake::MAMapRectMake',
+          {"x": x, "y": y, "width": width, "height": height});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -629,11 +714,11 @@ Future<double> MAMapRectGetMinX(MAMapRect rect) async {
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectGetMinX::MAMapRectGetMinX', {"rect": rect});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapRectGetMinX::MAMapRectGetMinX', {"rect": rect});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -650,11 +735,11 @@ Future<double> MAMapRectGetMinY(MAMapRect rect) async {
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectGetMinY::MAMapRectGetMinY', {"rect": rect});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapRectGetMinY::MAMapRectGetMinY', {"rect": rect});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -671,11 +756,11 @@ Future<double> MAMapRectGetMidX(MAMapRect rect) async {
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectGetMidX::MAMapRectGetMidX', {"rect": rect});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapRectGetMidX::MAMapRectGetMidX', {"rect": rect});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -692,11 +777,11 @@ Future<double> MAMapRectGetMidY(MAMapRect rect) async {
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectGetMidY::MAMapRectGetMidY', {"rect": rect});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapRectGetMidY::MAMapRectGetMidY', {"rect": rect});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -713,11 +798,11 @@ Future<double> MAMapRectGetMaxX(MAMapRect rect) async {
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectGetMaxX::MAMapRectGetMaxX', {"rect": rect});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapRectGetMaxX::MAMapRectGetMaxX', {"rect": rect});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -734,11 +819,11 @@ Future<double> MAMapRectGetMaxY(MAMapRect rect) async {
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectGetMaxY::MAMapRectGetMaxY', {"rect": rect});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapRectGetMaxY::MAMapRectGetMaxY', {"rect": rect});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -755,11 +840,11 @@ Future<double> MAMapRectGetWidth(MAMapRect rect) async {
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectGetWidth::MAMapRectGetWidth', {"rect": rect});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapRectGetWidth::MAMapRectGetWidth', {"rect": rect});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -776,11 +861,11 @@ Future<double> MAMapRectGetHeight(MAMapRect rect) async {
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectGetHeight::MAMapRectGetHeight', {"rect": rect});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapRectGetHeight::MAMapRectGetHeight', {"rect": rect});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -790,18 +875,21 @@ Future<double> MAMapRectGetHeight(MAMapRect rect) async {
   }
 }
 
-Future<bool> MAMapPointEqualToPoint(MAMapPoint point1, MAMapPoint point2) async {
+Future<bool> MAMapPointEqualToPoint(
+    MAMapPoint point1, MAMapPoint point2) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAMapPointEqualToPoint::MAMapPointEqualToPoint([])');
+    debugPrint(
+        'fluttify-dart: MAMapPointEqualToPoint::MAMapPointEqualToPoint([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapPointEqualToPoint::MAMapPointEqualToPoint', {"point1": point1, "point2": point2});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapPointEqualToPoint::MAMapPointEqualToPoint',
+          {"point1": point1, "point2": point2});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -818,11 +906,12 @@ Future<bool> MAMapSizeEqualToSize(MAMapSize size1, MAMapSize size2) async {
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapSizeEqualToSize::MAMapSizeEqualToSize', {"size1": size1, "size2": size2});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapSizeEqualToSize::MAMapSizeEqualToSize',
+          {"size1": size1, "size2": size2});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -839,11 +928,12 @@ Future<bool> MAMapRectEqualToRect(MAMapRect rect1, MAMapRect rect2) async {
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectEqualToRect::MAMapRectEqualToRect', {"rect1": rect1, "rect2": rect2});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapRectEqualToRect::MAMapRectEqualToRect',
+          {"rect1": rect1, "rect2": rect2});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -860,11 +950,11 @@ Future<bool> MAMapRectIsNull(MAMapRect rect) async {
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectIsNull::MAMapRectIsNull', {"rect": rect});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapRectIsNull::MAMapRectIsNull', {"rect": rect});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -881,11 +971,11 @@ Future<bool> MAMapRectIsEmpty(MAMapRect rect) async {
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapRectIsEmpty::MAMapRectIsEmpty', {"rect": rect});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAMapRectIsEmpty::MAMapRectIsEmpty', {"rect": rect});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -902,11 +992,12 @@ Future<String> MAStringFromMapPoint(MAMapPoint point) async {
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAStringFromMapPoint::MAStringFromMapPoint', {"point": point});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod(
+          'MAStringFromMapPoint::MAStringFromMapPoint', {"point": point});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -923,11 +1014,11 @@ Future<String> MAStringFromMapSize(MAMapSize size) async {
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAStringFromMapSize::MAStringFromMapSize', {"size": size});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAStringFromMapSize::MAStringFromMapSize', {"size": size});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -944,11 +1035,11 @@ Future<String> MAStringFromMapRect(MAMapRect rect) async {
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAStringFromMapRect::MAStringFromMapRect', {"rect": rect});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAStringFromMapRect::MAStringFromMapRect', {"rect": rect});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -958,18 +1049,21 @@ Future<String> MAStringFromMapRect(MAMapRect rect) async {
   }
 }
 
-Future<double> MAGetDirectionFromCoords(CLLocationCoordinate2D fromCoord, CLLocationCoordinate2D toCoord) async {
+Future<double> MAGetDirectionFromCoords(
+    CLLocationCoordinate2D fromCoord, CLLocationCoordinate2D toCoord) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAGetDirectionFromCoords::MAGetDirectionFromCoords([])');
+    debugPrint(
+        'fluttify-dart: MAGetDirectionFromCoords::MAGetDirectionFromCoords([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAGetDirectionFromCoords::MAGetDirectionFromCoords', {"fromCoord": fromCoord, "toCoord": toCoord});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAGetDirectionFromCoords::MAGetDirectionFromCoords',
+          {"fromCoord": fromCoord, "toCoord": toCoord});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -979,18 +1073,21 @@ Future<double> MAGetDirectionFromCoords(CLLocationCoordinate2D fromCoord, CLLoca
   }
 }
 
-Future<double> MAGetDirectionFromPoints(MAMapPoint fromPoint, MAMapPoint toPoint) async {
+Future<double> MAGetDirectionFromPoints(
+    MAMapPoint fromPoint, MAMapPoint toPoint) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAGetDirectionFromPoints::MAGetDirectionFromPoints([])');
+    debugPrint(
+        'fluttify-dart: MAGetDirectionFromPoints::MAGetDirectionFromPoints([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAGetDirectionFromPoints::MAGetDirectionFromPoints', {"fromPoint": fromPoint, "toPoint": toPoint});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAGetDirectionFromPoints::MAGetDirectionFromPoints',
+          {"fromPoint": fromPoint, "toPoint": toPoint});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -1000,18 +1097,22 @@ Future<double> MAGetDirectionFromPoints(MAMapPoint fromPoint, MAMapPoint toPoint
   }
 }
 
-Future<double> MAGetDistanceFromPointToLine(MAMapPoint point, MAMapPoint lineBegin, MAMapPoint lineEnd) async {
+Future<double> MAGetDistanceFromPointToLine(
+    MAMapPoint point, MAMapPoint lineBegin, MAMapPoint lineEnd) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAGetDistanceFromPointToLine::MAGetDistanceFromPointToLine([])');
+    debugPrint(
+        'fluttify-dart: MAGetDistanceFromPointToLine::MAGetDistanceFromPointToLine([])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAGetDistanceFromPointToLine::MAGetDistanceFromPointToLine', {"point": point, "lineBegin": lineBegin, "lineEnd": lineEnd});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod(
+          'MAGetDistanceFromPointToLine::MAGetDistanceFromPointToLine',
+          {"point": point, "lineBegin": lineBegin, "lineEnd": lineEnd});
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {
@@ -1021,18 +1122,25 @@ Future<double> MAGetDistanceFromPointToLine(MAMapPoint point, MAMapPoint lineBeg
   }
 }
 
-Future<bool> MAPolylineHitTest(List<MAMapPoint> linePoints, int count, MAMapPoint tappedPoint, double lineWidth) async {
+Future<bool> MAPolylineHitTest(List<MAMapPoint> linePoints, int count,
+    MAMapPoint tappedPoint, double lineWidth) async {
   // print log
   if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: MAPolylineHitTest::MAPolylineHitTest([\'count\':$count, \'lineWidth\':$lineWidth])');
+    debugPrint(
+        'fluttify-dart: MAPolylineHitTest::MAPolylineHitTest([\'count\':$count, \'lineWidth\':$lineWidth])');
   }
 
   // invoke native method
-  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolylineHitTest::MAPolylineHitTest', {"linePoints": linePoints, "count": count, "tappedPoint": tappedPoint, "lineWidth": lineWidth});
-  
+  final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+          StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+      .invokeMethod('MAPolylineHitTest::MAPolylineHitTest', {
+    "linePoints": linePoints,
+    "count": count,
+    "tappedPoint": tappedPoint,
+    "lineWidth": lineWidth
+  });
 
   // handle native call
-  
 
   // convert native result to dart side object
   if (__result__ == null) {

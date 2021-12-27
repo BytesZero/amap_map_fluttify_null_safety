@@ -12,45 +12,63 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-class com_amap_api_maps_SwipeDismissCallBack extends java_lang_Object with com_amap_api_maps_SwipeDismissTouchListener_DismissCallbacks {
+class com_amap_api_maps_SwipeDismissCallBack extends java_lang_Object
+    with com_amap_api_maps_SwipeDismissTouchListener_DismissCallbacks {
   //region constants
   static const String name__ = 'com.amap.api.maps.SwipeDismissCallBack';
 
   @override
   final String tag__ = 'amap_map_fluttify';
 
-  
   //endregion
 
   //region creators
-  static Future<com_amap_api_maps_SwipeDismissCallBack> create__com_amap_api_maps_SwipeDismissView(com_amap_api_maps_SwipeDismissView var1) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_SwipeDismissCallBack__com_amap_api_maps_SwipeDismissView', {"var1": var1});
+  static Future<com_amap_api_maps_SwipeDismissCallBack>
+      create__com_amap_api_maps_SwipeDismissView(
+          com_amap_api_maps_SwipeDismissView var1) async {
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::createcom_amap_api_maps_SwipeDismissCallBack__com_amap_api_maps_SwipeDismissView',
+            {"var1": var1});
     final object = com_amap_api_maps_SwipeDismissCallBack()..refId = refId;
     return object;
   }
-  
-  static Future<List<com_amap_api_maps_SwipeDismissCallBack>> create_batch__com_amap_api_maps_SwipeDismissView(List<com_amap_api_maps_SwipeDismissView> var1) async {
+
+  static Future<List<com_amap_api_maps_SwipeDismissCallBack>>
+      create_batch__com_amap_api_maps_SwipeDismissView(
+          List<com_amap_api_maps_SwipeDismissView> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_SwipeDismissCallBack__com_amap_api_maps_SwipeDismissView', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
-  
-    final List<com_amap_api_maps_SwipeDismissCallBack> typedResult = resultBatch.map((result) => com_amap_api_maps_SwipeDismissCallBack()..refId = result).toList();
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::create_batchcom_amap_api_maps_SwipeDismissCallBack__com_amap_api_maps_SwipeDismissView',
+            [
+          for (int __i__ = 0; __i__ < var1.length; __i__++)
+            {"var1": var1[__i__]}
+        ]);
+
+    final List<com_amap_api_maps_SwipeDismissCallBack> typedResult = resultBatch
+        .map((result) =>
+            com_amap_api_maps_SwipeDismissCallBack()..refId = result)
+        .toList();
     return typedResult;
   }
-  
+
   //endregion
 
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
+
   //endregion
 
   @override
@@ -59,16 +77,17 @@ class com_amap_api_maps_SwipeDismissCallBack extends java_lang_Object with com_a
   }
 }
 
-extension com_amap_api_maps_SwipeDismissCallBack_Batch on List<com_amap_api_maps_SwipeDismissCallBack> {
+extension com_amap_api_maps_SwipeDismissCallBack_Batch
+    on List<com_amap_api_maps_SwipeDismissCallBack> {
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
+
   //endregion
 }

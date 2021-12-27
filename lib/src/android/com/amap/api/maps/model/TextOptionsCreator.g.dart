@@ -12,45 +12,57 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-class com_amap_api_maps_model_TextOptionsCreator extends java_lang_Object  {
+class com_amap_api_maps_model_TextOptionsCreator extends java_lang_Object {
   //region constants
   static const String name__ = 'com.amap.api.maps.model.TextOptionsCreator';
 
   @override
   final String tag__ = 'amap_map_fluttify';
 
-  
   //endregion
 
   //region creators
   static Future<com_amap_api_maps_model_TextOptionsCreator> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_TextOptionsCreator__', );
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      'ObjectFactory::createcom_amap_api_maps_model_TextOptionsCreator__',
+    );
     final object = com_amap_api_maps_model_TextOptionsCreator()..refId = refId;
     return object;
   }
-  
-  static Future<List<com_amap_api_maps_model_TextOptionsCreator>> create_batch__(int length) async {
+
+  static Future<List<com_amap_api_maps_model_TextOptionsCreator>>
+      create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_TextOptionsCreator__', {'length': length});
-  
-    final List<com_amap_api_maps_model_TextOptionsCreator> typedResult = resultBatch.map((result) => com_amap_api_maps_model_TextOptionsCreator()..refId = result).toList();
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::create_batchcom_amap_api_maps_model_TextOptionsCreator__',
+            {'length': length});
+
+    final List<com_amap_api_maps_model_TextOptionsCreator> typedResult =
+        resultBatch
+            .map((result) =>
+                com_amap_api_maps_model_TextOptionsCreator()..refId = result)
+            .toList();
     return typedResult;
   }
-  
+
   //endregion
 
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
+
   //endregion
 
   @override
@@ -59,16 +71,17 @@ class com_amap_api_maps_model_TextOptionsCreator extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_maps_model_TextOptionsCreator_Batch on List<com_amap_api_maps_model_TextOptionsCreator> {
+extension com_amap_api_maps_model_TextOptionsCreator_Batch
+    on List<com_amap_api_maps_model_TextOptionsCreator> {
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
+
   //endregion
 }

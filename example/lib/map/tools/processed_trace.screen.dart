@@ -22,10 +22,10 @@ class ProcessedTraceStateScreen extends State<ProcessedTraceScreen> {
         title: Text('轨迹纠偏'),
       ),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
+        padding: EdgeInsets.all(20),
         children: <Widget>[
           DecoratedRow(
-            itemSpacing: kSpaceNormal,
+            itemSpacing: 16,
             children: <Widget>[
               Text('起点:'),
               Flexible(
@@ -45,7 +45,7 @@ class ProcessedTraceStateScreen extends State<ProcessedTraceScreen> {
             ],
           ),
           DecoratedRow(
-            itemSpacing: kSpaceNormal,
+            itemSpacing: 16,
             children: <Widget>[
               Text('终点:'),
               Flexible(

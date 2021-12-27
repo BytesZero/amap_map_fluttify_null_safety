@@ -12,61 +12,119 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-class com_amap_api_maps_model_animation_RotateAnimation extends com_amap_api_maps_model_animation_Animation  {
+class com_amap_api_maps_model_animation_RotateAnimation
+    extends com_amap_api_maps_model_animation_Animation {
   //region constants
-  static const String name__ = 'com.amap.api.maps.model.animation.RotateAnimation';
+  static const String name__ =
+      'com.amap.api.maps.model.animation.RotateAnimation';
 
   @override
   final String tag__ = 'amap_map_fluttify';
 
-  
   //endregion
 
   //region creators
-  static Future<com_amap_api_maps_model_animation_RotateAnimation> create__float__float__float__float__float(double var1, double var2, double var3, double var4, double var5) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_animation_RotateAnimation__float__float__float__float__float', {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5});
-    final object = com_amap_api_maps_model_animation_RotateAnimation()..refId = refId;
+  static Future<com_amap_api_maps_model_animation_RotateAnimation>
+      create__float__float__float__float__float(double var1, double var2,
+          double var3, double var4, double var5) async {
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::createcom_amap_api_maps_model_animation_RotateAnimation__float__float__float__float__float',
+            {
+          "var1": var1,
+          "var2": var2,
+          "var3": var3,
+          "var4": var4,
+          "var5": var5
+        });
+    final object = com_amap_api_maps_model_animation_RotateAnimation()
+      ..refId = refId;
     return object;
   }
-  
-  static Future<com_amap_api_maps_model_animation_RotateAnimation> create__float__float(double var1, double var2) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_animation_RotateAnimation__float__float', {"var1": var1, "var2": var2});
-    final object = com_amap_api_maps_model_animation_RotateAnimation()..refId = refId;
+
+  static Future<com_amap_api_maps_model_animation_RotateAnimation>
+      create__float__float(double var1, double var2) async {
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::createcom_amap_api_maps_model_animation_RotateAnimation__float__float',
+            {"var1": var1, "var2": var2});
+    final object = com_amap_api_maps_model_animation_RotateAnimation()
+      ..refId = refId;
     return object;
   }
-  
-  static Future<List<com_amap_api_maps_model_animation_RotateAnimation>> create_batch__float__float__float__float__float(List<double> var1, List<double> var2, List<double> var3, List<double> var4, List<double> var5) async {
-    if (var1.length != var2.length || var2.length != var3.length || var3.length != var4.length || var4.length != var5.length) {
+
+  static Future<List<com_amap_api_maps_model_animation_RotateAnimation>>
+      create_batch__float__float__float__float__float(
+          List<double> var1,
+          List<double> var2,
+          List<double> var3,
+          List<double> var4,
+          List<double> var5) async {
+    if (var1.length != var2.length ||
+        var2.length != var3.length ||
+        var3.length != var4.length ||
+        var4.length != var5.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_animation_RotateAnimation__float__float__float__float__float', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__]}]);
-  
-    final List<com_amap_api_maps_model_animation_RotateAnimation> typedResult = resultBatch.map((result) => com_amap_api_maps_model_animation_RotateAnimation()..refId = result).toList();
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::create_batchcom_amap_api_maps_model_animation_RotateAnimation__float__float__float__float__float',
+            [
+          for (int __i__ = 0; __i__ < var1.length; __i__++)
+            {
+              "var1": var1[__i__],
+              "var2": var2[__i__],
+              "var3": var3[__i__],
+              "var4": var4[__i__],
+              "var5": var5[__i__]
+            }
+        ]);
+
+    final List<com_amap_api_maps_model_animation_RotateAnimation> typedResult =
+        resultBatch
+            .map((result) => com_amap_api_maps_model_animation_RotateAnimation()
+              ..refId = result)
+            .toList();
     return typedResult;
   }
-  
-  static Future<List<com_amap_api_maps_model_animation_RotateAnimation>> create_batch__float__float(List<double> var1, List<double> var2) async {
+
+  static Future<List<com_amap_api_maps_model_animation_RotateAnimation>>
+      create_batch__float__float(List<double> var1, List<double> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_animation_RotateAnimation__float__float', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
-  
-    final List<com_amap_api_maps_model_animation_RotateAnimation> typedResult = resultBatch.map((result) => com_amap_api_maps_model_animation_RotateAnimation()..refId = result).toList();
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::create_batchcom_amap_api_maps_model_animation_RotateAnimation__float__float',
+            [
+          for (int __i__ = 0; __i__ < var1.length; __i__++)
+            {"var1": var1[__i__], "var2": var2[__i__]}
+        ]);
+
+    final List<com_amap_api_maps_model_animation_RotateAnimation> typedResult =
+        resultBatch
+            .map((result) => com_amap_api_maps_model_animation_RotateAnimation()
+              ..refId = result)
+            .toList();
     return typedResult;
   }
-  
+
   //endregion
 
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
+
   //endregion
 
   @override
@@ -75,16 +133,17 @@ class com_amap_api_maps_model_animation_RotateAnimation extends com_amap_api_map
   }
 }
 
-extension com_amap_api_maps_model_animation_RotateAnimation_Batch on List<com_amap_api_maps_model_animation_RotateAnimation> {
+extension com_amap_api_maps_model_animation_RotateAnimation_Batch
+    on List<com_amap_api_maps_model_animation_RotateAnimation> {
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
+
   //endregion
 }

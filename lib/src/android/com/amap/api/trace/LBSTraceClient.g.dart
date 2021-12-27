@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-class com_amap_api_trace_LBSTraceClient extends java_lang_Object  {
+class com_amap_api_trace_LBSTraceClient extends java_lang_Object {
   //region constants
   static const String name__ = 'com.amap.api.trace.LBSTraceClient';
 
@@ -28,109 +28,155 @@ class com_amap_api_trace_LBSTraceClient extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_trace_LBSTraceClient> create__android_content_Context(android_content_Context var1) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_trace_LBSTraceClient__android_content_Context', {"var1": var1});
+  static Future<com_amap_api_trace_LBSTraceClient>
+      create__android_content_Context(android_content_Context var1) async {
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::createcom_amap_api_trace_LBSTraceClient__android_content_Context',
+            {"var1": var1});
     final object = com_amap_api_trace_LBSTraceClient()..refId = refId;
     return object;
   }
-  
-  static Future<List<com_amap_api_trace_LBSTraceClient>> create_batch__android_content_Context(List<android_content_Context> var1) async {
+
+  static Future<List<com_amap_api_trace_LBSTraceClient>>
+      create_batch__android_content_Context(
+          List<android_content_Context> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_trace_LBSTraceClient__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
-  
-    final List<com_amap_api_trace_LBSTraceClient> typedResult = resultBatch.map((result) => com_amap_api_trace_LBSTraceClient()..refId = result).toList();
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::create_batchcom_amap_api_trace_LBSTraceClient__android_content_Context',
+            [
+          for (int __i__ = 0; __i__ < var1.length; __i__++)
+            {"var1": var1[__i__]}
+        ]);
+
+    final List<com_amap_api_trace_LBSTraceClient> typedResult = resultBatch
+        .map((result) => com_amap_api_trace_LBSTraceClient()..refId = result)
+        .toList();
     return typedResult;
   }
-  
+
   //endregion
 
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
-  static Future<com_amap_api_trace_LBSTraceClient> getInstance(android_content_Context var0) async {
+
+  static Future<com_amap_api_trace_LBSTraceClient> getInstance(
+      android_content_Context var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.trace.LBSTraceClient::getInstance([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.trace.LBSTraceClient::getInstance([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.trace.LBSTraceClient::getInstance', {"var0": var0});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.trace.LBSTraceClient::getInstance', {"var0": var0});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_trace_LBSTraceClient()..refId = __result__;
+      final __return__ = com_amap_api_trace_LBSTraceClient()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
-  Future<void> queryProcessedTrace(int var1, List<com_amap_api_trace_TraceLocation> var2, int var3, com_amap_api_trace_TraceListener var4) async {
+
+  Future<void> queryProcessedTrace(
+      int var1,
+      List<com_amap_api_trace_TraceLocation> var2,
+      int var3,
+      com_amap_api_trace_TraceListener var4) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.trace.LBSTraceClient@$refId::queryProcessedTrace([\'var1\':$var1, \'var3\':$var3])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.trace.LBSTraceClient@$refId::queryProcessedTrace([\'var1\':$var1, \'var3\':$var3])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.trace.LBSTraceClient::queryProcessedTrace', {"var1": var1, "var2": var2, "var3": var3, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.trace.LBSTraceClient::queryProcessedTrace',
+            {"var1": var1, "var2": var2, "var3": var3, "__this__": this});
+
     // handle native call
-    MethodChannel('com.amap.api.trace.LBSTraceClient::queryProcessedTrace::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify')))
+    MethodChannel(
+            'com.amap.api.trace.LBSTraceClient::queryProcessedTrace::Callback@$refId',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          try {
-            final args = methodCall.arguments as Map;
-            switch (methodCall.method) {
-              case 'Callback::com.amap.api.trace.TraceListener::onRequestFailed':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onRequestFailed([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-                }
-          
-                // handle the native call
-                var4?.onRequestFailed(args['var1'], args['var2']);
-                break;
-              case 'Callback::com.amap.api.trace.TraceListener::onTraceProcessing':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onTraceProcessing([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
-                }
-          
-                // handle the native call
-                var4?.onTraceProcessing(args['var1'], args['var2'], (args['var3'] as List).cast<String>().map((__it__) => TypeOpAmapMapFluttifyAndroid(__it__).as__<com_amap_api_maps_model_LatLng>()).toList());
-                break;
-              case 'Callback::com.amap.api.trace.TraceListener::onFinished':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onFinished([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}, \'var4\':${args['var4']}])');
-                }
-          
-                // handle the native call
-                var4?.onFinished(args['var1'], (args['var2'] as List).cast<String>().map((__it__) => TypeOpAmapMapFluttifyAndroid(__it__).as__<com_amap_api_maps_model_LatLng>()).toList(), args['var3'], args['var4']);
-                break;
-              default:
-                break;
+      try {
+        final args = methodCall.arguments as Map;
+        switch (methodCall.method) {
+          case 'Callback::com.amap.api.trace.TraceListener::onRequestFailed':
+            // print log
+            if (fluttifyLogEnabled) {
+              debugPrint(
+                  'fluttify-dart-callback: onRequestFailed([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
             }
-          } catch (e) {
-            debugPrint(e);
-            throw e;
-          }
-        });
-  
+
+            // handle the native call
+            var4?.onRequestFailed(args['var1'], args['var2']);
+            break;
+          case 'Callback::com.amap.api.trace.TraceListener::onTraceProcessing':
+            // print log
+            if (fluttifyLogEnabled) {
+              debugPrint(
+                  'fluttify-dart-callback: onTraceProcessing([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
+            }
+
+            // handle the native call
+            var4?.onTraceProcessing(
+                args['var1'],
+                args['var2'],
+                (args['var3'] as List)
+                    .cast<String>()
+                    .map((__it__) => TypeOpAmapMapFluttifyAndroid(__it__)
+                        .as__<com_amap_api_maps_model_LatLng>())
+                    .toList());
+            break;
+          case 'Callback::com.amap.api.trace.TraceListener::onFinished':
+            // print log
+            if (fluttifyLogEnabled) {
+              debugPrint(
+                  'fluttify-dart-callback: onFinished([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}, \'var4\':${args['var4']}])');
+            }
+
+            // handle the native call
+            var4?.onFinished(
+                args['var1'],
+                (args['var2'] as List)
+                    .cast<String>()
+                    .map((__it__) => TypeOpAmapMapFluttifyAndroid(__it__)
+                        .as__<com_amap_api_maps_model_LatLng>())
+                    .toList(),
+                args['var3'],
+                args['var4']);
+            break;
+          default:
+            break;
+        }
+      } catch (e) {
+        debugPrint(e);
+        throw e;
+      }
+    });
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -139,42 +185,58 @@ class com_amap_api_trace_LBSTraceClient extends java_lang_Object  {
       return __return__;
     }
   }
-  
-  
+
   Future<void> startTrace(com_amap_api_trace_TraceStatusListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.trace.LBSTraceClient@$refId::startTrace([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.trace.LBSTraceClient@$refId::startTrace([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.trace.LBSTraceClient::startTrace', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.trace.LBSTraceClient::startTrace',
+            {"__this__": this});
+
     // handle native call
-    MethodChannel('com.amap.api.trace.LBSTraceClient::startTrace::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify')))
+    MethodChannel(
+            'com.amap.api.trace.LBSTraceClient::startTrace::Callback@$refId',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
         .setMethodCallHandler((methodCall) async {
-          try {
-            final args = methodCall.arguments as Map;
-            switch (methodCall.method) {
-              case 'Callback::com.amap.api.trace.TraceStatusListener::onTraceStatus':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onTraceStatus([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
-                }
-          
-                // handle the native call
-                var1?.onTraceStatus((args['var1'] as List).cast<String>().map((__it__) => TypeOpAmapMapFluttifyAndroid(__it__).as__<com_amap_api_trace_TraceLocation>()).toList(), (args['var2'] as List).cast<String>().map((__it__) => TypeOpAmapMapFluttifyAndroid(__it__).as__<com_amap_api_maps_model_LatLng>()).toList(), args['var3']);
-                break;
-              default:
-                break;
+      try {
+        final args = methodCall.arguments as Map;
+        switch (methodCall.method) {
+          case 'Callback::com.amap.api.trace.TraceStatusListener::onTraceStatus':
+            // print log
+            if (fluttifyLogEnabled) {
+              debugPrint(
+                  'fluttify-dart-callback: onTraceStatus([\'var1\':${args['var1']}, \'var2\':${args['var2']}, \'var3\':${args['var3']}])');
             }
-          } catch (e) {
-            debugPrint(e);
-            throw e;
-          }
-        });
-  
+
+            // handle the native call
+            var1?.onTraceStatus(
+                (args['var1'] as List)
+                    .cast<String>()
+                    .map((__it__) => TypeOpAmapMapFluttifyAndroid(__it__)
+                        .as__<com_amap_api_trace_TraceLocation>())
+                    .toList(),
+                (args['var2'] as List)
+                    .cast<String>()
+                    .map((__it__) => TypeOpAmapMapFluttifyAndroid(__it__)
+                        .as__<com_amap_api_maps_model_LatLng>())
+                    .toList(),
+                args['var3']);
+            break;
+          default:
+            break;
+        }
+      } catch (e) {
+        debugPrint(e);
+        throw e;
+      }
+    });
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -183,21 +245,22 @@ class com_amap_api_trace_LBSTraceClient extends java_lang_Object  {
       return __return__;
     }
   }
-  
-  
+
   Future<void> stopTrace() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.trace.LBSTraceClient@$refId::stopTrace([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.trace.LBSTraceClient@$refId::stopTrace([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.trace.LBSTraceClient::stopTrace', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.trace.LBSTraceClient::stopTrace', {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -206,21 +269,22 @@ class com_amap_api_trace_LBSTraceClient extends java_lang_Object  {
       return __return__;
     }
   }
-  
-  
+
   Future<void> destroy() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.trace.LBSTraceClient@$refId::destroy([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.trace.LBSTraceClient@$refId::destroy([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.trace.LBSTraceClient::destroy', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.trace.LBSTraceClient::destroy', {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -229,7 +293,7 @@ class com_amap_api_trace_LBSTraceClient extends java_lang_Object  {
       return __return__;
     }
   }
-  
+
   //endregion
 
   @override
@@ -238,72 +302,91 @@ class com_amap_api_trace_LBSTraceClient extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_trace_LBSTraceClient_Batch on List<com_amap_api_trace_LBSTraceClient> {
+extension com_amap_api_trace_LBSTraceClient_Batch
+    on List<com_amap_api_trace_LBSTraceClient> {
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
-  static Future<List<com_amap_api_trace_LBSTraceClient>> getInstance_batch(List<android_content_Context> var0) async {
+
+  static Future<List<com_amap_api_trace_LBSTraceClient>> getInstance_batch(
+      List<android_content_Context> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.trace.LBSTraceClient::getInstance_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.trace.LBSTraceClient::getInstance_batch', [
+      for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_trace_LBSTraceClient()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_trace_LBSTraceClient()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   Future<List<void>> stopTrace_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.trace.LBSTraceClient::stopTrace_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.trace.LBSTraceClient::stopTrace_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   Future<List<void>> destroy_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.trace.LBSTraceClient::destroy_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.trace.LBSTraceClient::destroy_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
+
   //endregion
 }

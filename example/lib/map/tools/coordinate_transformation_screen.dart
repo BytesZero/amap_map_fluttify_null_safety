@@ -23,7 +23,6 @@ class _CoordinateTransformationStateScreen
       body: DecoratedColumn(
         padding: const EdgeInsets.all(8.0),
         children: <Widget>[
-          SPACE_NORMAL,
           TextFormField(
             readOnly: true,
             controller: _latController,
@@ -33,7 +32,6 @@ class _CoordinateTransformationStateScreen
             ),
             enabled: false,
           ),
-          SPACE_NORMAL,
           TextFormField(
             readOnly: true,
             controller: _lngController,
@@ -43,15 +41,13 @@ class _CoordinateTransformationStateScreen
             ),
             enabled: false,
           ),
-          SPACE_NORMAL,
           Text('转换结果: $_target'),
-          SPACE_NORMAL,
           GridView.count(
             shrinkWrap: true,
             crossAxisCount: 3,
             childAspectRatio: 3,
-            mainAxisSpacing: kSpaceNormal,
-            crossAxisSpacing: kSpaceNormal,
+            mainAxisSpacing: 16,
+            crossAxisSpacing: 16,
             children: <Widget>[
               RaisedButton(
                 onPressed: () async {

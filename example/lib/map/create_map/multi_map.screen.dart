@@ -48,7 +48,6 @@ class _MultiMapScreenState extends State<MultiMapScreen> {
           Flexible(
             child: DecoratedColumn(
               scrollable: true,
-              divider: kDividerZero,
               children: <Widget>[
                 DiscreteSetting(
                   head: '选择地图实例 当前实例: $_currentInstance',

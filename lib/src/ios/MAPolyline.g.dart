@@ -19,51 +19,60 @@ class MAPolyline extends MAMultiPoint with MAOverlay, MAAnnotation {
   @override
   final String tag__ = 'amap_map_fluttify';
 
-  
   //endregion
 
   //region creators
-  static Future<MAPolyline> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAPolyline', {'init': init});
+  static Future<MAPolyline> create__({bool init = true /* ios only */}) async {
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('ObjectFactory::createMAPolyline', {'init': init});
     final object = MAPolyline()..refId = refId;
     return object;
   }
-  
-  static Future<List<MAPolyline>> create_batch__(int length, { bool init = true /* ios only */ }) async {
+
+  static Future<List<MAPolyline>> create_batch__(int length,
+      {bool init = true /* ios only */}) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAPolyline', {'length': length, 'init': init});
-  
-    final List<MAPolyline> typedResult = resultBatch.map((result) => MAPolyline()..refId = result).toList();
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('ObjectFactory::create_batchMAPolyline',
+            {'length': length, 'init': init});
+
+    final List<MAPolyline> typedResult =
+        resultBatch.map((result) => MAPolyline()..refId = result).toList();
     return typedResult;
   }
-  
+
   //endregion
 
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
-  static Future<MAPolyline> polylineWithPoints_count(List<MAMapPoint> points, int count) async {
+
+  static Future<MAPolyline> polylineWithPoints_count(
+      List<MAMapPoint> points, int count) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: MAPolyline::polylineWithPoints([\'count\':$count])');
+      debugPrint(
+          'fluttify-dart: MAPolyline::polylineWithPoints([\'count\':$count])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolyline::polylineWithPoints_count', {"points": points, "count": count});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('MAPolyline::polylineWithPoints_count',
+            {"points": points, "count": count});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -72,21 +81,23 @@ class MAPolyline extends MAMultiPoint with MAOverlay, MAAnnotation {
       return __return__;
     }
   }
-  
-  
-  static Future<MAPolyline> polylineWithCoordinates_count(List<CLLocationCoordinate2D> coords, int count) async {
+
+  static Future<MAPolyline> polylineWithCoordinates_count(
+      List<CLLocationCoordinate2D> coords, int count) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: MAPolyline::polylineWithCoordinates([\'count\':$count])');
+      debugPrint(
+          'fluttify-dart: MAPolyline::polylineWithCoordinates([\'count\':$count])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolyline::polylineWithCoordinates_count', {"coords": coords, "count": count});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('MAPolyline::polylineWithCoordinates_count',
+            {"coords": coords, "count": count});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -95,21 +106,23 @@ class MAPolyline extends MAMultiPoint with MAOverlay, MAAnnotation {
       return __return__;
     }
   }
-  
-  
-  Future<bool> setPolylineWithPoints_count(List<MAMapPoint> points, int count) async {
+
+  Future<bool> setPolylineWithPoints_count(
+      List<MAMapPoint> points, int count) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: MAPolyline@$refId::setPolylineWithPoints([\'count\':$count])');
+      debugPrint(
+          'fluttify-dart: MAPolyline@$refId::setPolylineWithPoints([\'count\':$count])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolyline::setPolylineWithPoints_count', {"points": points, "count": count, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('MAPolyline::setPolylineWithPoints_count',
+            {"points": points, "count": count, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -118,21 +131,23 @@ class MAPolyline extends MAMultiPoint with MAOverlay, MAAnnotation {
       return __return__;
     }
   }
-  
-  
-  Future<bool> setPolylineWithCoordinates_count(List<CLLocationCoordinate2D> coords, int count) async {
+
+  Future<bool> setPolylineWithCoordinates_count(
+      List<CLLocationCoordinate2D> coords, int count) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: MAPolyline@$refId::setPolylineWithCoordinates([\'count\':$count])');
+      debugPrint(
+          'fluttify-dart: MAPolyline@$refId::setPolylineWithCoordinates([\'count\':$count])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolyline::setPolylineWithCoordinates_count', {"coords": coords, "count": count, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('MAPolyline::setPolylineWithCoordinates_count',
+            {"coords": coords, "count": count, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -141,7 +156,7 @@ class MAPolyline extends MAMultiPoint with MAOverlay, MAAnnotation {
       return __return__;
     }
   }
-  
+
   //endregion
 
   @override
@@ -152,89 +167,126 @@ class MAPolyline extends MAMultiPoint with MAOverlay, MAAnnotation {
 
 extension MAPolyline_Batch on List<MAPolyline> {
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
-  static Future<List<MAPolyline>> polylineWithPoints_count_batch(List<List<MAMapPoint>> points, List<int> count) async {
+
+  static Future<List<MAPolyline>> polylineWithPoints_count_batch(
+      List<List<MAMapPoint>> points, List<int> count) async {
     if (points.length != count.length) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolyline::polylineWithPoints_count_batch', [for (int __i__ = 0; __i__ < points.length; __i__++) {"points": points[__i__], "count": count[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('MAPolyline::polylineWithPoints_count_batch', [
+      for (int __i__ = 0; __i__ < points.length; __i__++)
+        {"points": points[__i__], "count": count[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => MAPolyline()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => MAPolyline()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  static Future<List<MAPolyline>> polylineWithCoordinates_count_batch(List<List<CLLocationCoordinate2D>> coords, List<int> count) async {
+
+  static Future<List<MAPolyline>> polylineWithCoordinates_count_batch(
+      List<List<CLLocationCoordinate2D>> coords, List<int> count) async {
     if (coords.length != count.length) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolyline::polylineWithCoordinates_count_batch', [for (int __i__ = 0; __i__ < coords.length; __i__++) {"coords": coords[__i__], "count": count[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('MAPolyline::polylineWithCoordinates_count_batch', [
+      for (int __i__ = 0; __i__ < coords.length; __i__++)
+        {"coords": coords[__i__], "count": count[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => MAPolyline()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => MAPolyline()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  Future<List<bool>> setPolylineWithPoints_count_batch(List<List<MAMapPoint>> points, List<int> count) async {
+
+  Future<List<bool>> setPolylineWithPoints_count_batch(
+      List<List<MAMapPoint>> points, List<int> count) async {
     if (points.length != count.length) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolyline::setPolylineWithPoints_count_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"points": points[__i__], "count": count[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('MAPolyline::setPolylineWithPoints_count_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++)
+        {
+          "points": points[__i__],
+          "count": count[__i__],
+          "__this__": this[__i__]
+        }
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<bool>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  Future<List<bool>> setPolylineWithCoordinates_count_batch(List<List<CLLocationCoordinate2D>> coords, List<int> count) async {
+
+  Future<List<bool>> setPolylineWithCoordinates_count_batch(
+      List<List<CLLocationCoordinate2D>> coords, List<int> count) async {
     if (coords.length != count.length) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolyline::setPolylineWithCoordinates_count_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"coords": coords[__i__], "count": count[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('MAPolyline::setPolylineWithCoordinates_count_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++)
+        {
+          "coords": coords[__i__],
+          "count": count[__i__],
+          "__this__": this[__i__]
+        }
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<bool>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
+
   //endregion
 }

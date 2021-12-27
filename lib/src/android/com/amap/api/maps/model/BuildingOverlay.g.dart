@@ -12,43 +12,47 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-class com_amap_api_maps_model_BuildingOverlay extends com_amap_api_maps_model_BaseOverlay  {
+class com_amap_api_maps_model_BuildingOverlay
+    extends com_amap_api_maps_model_BaseOverlay {
   //region constants
   static const String name__ = 'com.amap.api.maps.model.BuildingOverlay';
 
   @override
   final String tag__ = 'amap_map_fluttify';
 
-  
   //endregion
 
   //region creators
-  
+
   //endregion
 
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
-  Future<void> setDefaultOptions(com_amap_api_maps_model_BuildingOverlayOptions var1) async {
+
+  Future<void> setDefaultOptions(
+      com_amap_api_maps_model_BuildingOverlayOptions var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::setDefaultOptions([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::setDefaultOptions([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::setDefaultOptions', {"var1": var1, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BuildingOverlay::setDefaultOptions',
+            {"var1": var1, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -57,44 +61,51 @@ class com_amap_api_maps_model_BuildingOverlay extends com_amap_api_maps_model_Ba
       return __return__;
     }
   }
-  
-  
-  Future<com_amap_api_maps_model_BuildingOverlayOptions> getDefaultOptions() async {
+
+  Future<com_amap_api_maps_model_BuildingOverlayOptions>
+      getDefaultOptions() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::getDefaultOptions([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::getDefaultOptions([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::getDefaultOptions', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BuildingOverlay::getDefaultOptions',
+            {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_BuildingOverlayOptions()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_BuildingOverlayOptions()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
-  Future<void> setCustomOptions(List<com_amap_api_maps_model_BuildingOverlayOptions> var1) async {
+
+  Future<void> setCustomOptions(
+      List<com_amap_api_maps_model_BuildingOverlayOptions> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::setCustomOptions([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::setCustomOptions([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::setCustomOptions', {"var1": var1, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BuildingOverlay::setCustomOptions',
+            {"var1": var1, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -103,44 +114,52 @@ class com_amap_api_maps_model_BuildingOverlay extends com_amap_api_maps_model_Ba
       return __return__;
     }
   }
-  
-  
-  Future<List<com_amap_api_maps_model_BuildingOverlayOptions>> getCustomOptions() async {
+
+  Future<List<com_amap_api_maps_model_BuildingOverlayOptions>>
+      getCustomOptions() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::getCustomOptions([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::getCustomOptions([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::getCustomOptions', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BuildingOverlay::getCustomOptions',
+            {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_maps_model_BuildingOverlayOptions()..refId = __it__).toList();
+      final __return__ = (__result__ as List)
+          .cast<String>()
+          .map((__it__) =>
+              com_amap_api_maps_model_BuildingOverlayOptions()..refId = __it__)
+          .toList();
       return __return__;
     }
   }
-  
-  
+
   Future<void> destroy() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::destroy([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::destroy([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::destroy', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.BuildingOverlay::destroy',
+            {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -149,21 +168,22 @@ class com_amap_api_maps_model_BuildingOverlay extends com_amap_api_maps_model_Ba
       return __return__;
     }
   }
-  
-  
+
   Future<String> getId() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::getId([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::getId([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::getId', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.BuildingOverlay::getId',
+            {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -172,21 +192,22 @@ class com_amap_api_maps_model_BuildingOverlay extends com_amap_api_maps_model_Ba
       return __return__;
     }
   }
-  
-  
+
   Future<void> setZIndex(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::setZIndex([\'var1\':$var1])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::setZIndex([\'var1\':$var1])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::setZIndex', {"var1": var1, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.BuildingOverlay::setZIndex',
+            {"var1": var1, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -195,21 +216,22 @@ class com_amap_api_maps_model_BuildingOverlay extends com_amap_api_maps_model_Ba
       return __return__;
     }
   }
-  
-  
+
   Future<double> getZIndex() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::getZIndex([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::getZIndex([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::getZIndex', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.BuildingOverlay::getZIndex',
+            {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -218,21 +240,22 @@ class com_amap_api_maps_model_BuildingOverlay extends com_amap_api_maps_model_Ba
       return __return__;
     }
   }
-  
-  
+
   Future<void> setVisible(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::setVisible([\'var1\':$var1])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::setVisible([\'var1\':$var1])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::setVisible', {"var1": var1, "__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.BuildingOverlay::setVisible',
+            {"var1": var1, "__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -241,21 +264,22 @@ class com_amap_api_maps_model_BuildingOverlay extends com_amap_api_maps_model_Ba
       return __return__;
     }
   }
-  
-  
+
   Future<bool> isVisible() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::isVisible([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BuildingOverlay@$refId::isVisible([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::isVisible', {"__this__": this});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.BuildingOverlay::isVisible',
+            {"__this__": this});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -264,7 +288,7 @@ class com_amap_api_maps_model_BuildingOverlay extends com_amap_api_maps_model_Ba
       return __return__;
     }
   }
-  
+
   //endregion
 
   @override
@@ -273,205 +297,281 @@ class com_amap_api_maps_model_BuildingOverlay extends com_amap_api_maps_model_Ba
   }
 }
 
-extension com_amap_api_maps_model_BuildingOverlay_Batch on List<com_amap_api_maps_model_BuildingOverlay> {
+extension com_amap_api_maps_model_BuildingOverlay_Batch
+    on List<com_amap_api_maps_model_BuildingOverlay> {
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
-  Future<List<void>> setDefaultOptions_batch(List<com_amap_api_maps_model_BuildingOverlayOptions> var1) async {
+
+  Future<List<void>> setDefaultOptions_batch(
+      List<com_amap_api_maps_model_BuildingOverlayOptions> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::setDefaultOptions_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BuildingOverlay::setDefaultOptions_batch',
+            [
+          for (int __i__ = 0; __i__ < length; __i__++)
+            {"var1": var1[__i__], "__this__": this[__i__]}
+        ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  Future<List<com_amap_api_maps_model_BuildingOverlayOptions>> getDefaultOptions_batch() async {
+
+  Future<List<com_amap_api_maps_model_BuildingOverlayOptions>>
+      getDefaultOptions_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::getDefaultOptions_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BuildingOverlay::getDefaultOptions_batch',
+            [
+          for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+        ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_BuildingOverlayOptions()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => com_amap_api_maps_model_BuildingOverlayOptions()
+            ..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  Future<List<void>> setCustomOptions_batch(List<List<com_amap_api_maps_model_BuildingOverlayOptions>> var1) async {
+
+  Future<List<void>> setCustomOptions_batch(
+      List<List<com_amap_api_maps_model_BuildingOverlayOptions>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::setCustomOptions_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BuildingOverlay::setCustomOptions_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++)
+        {"var1": var1[__i__], "__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  Future<List<List<com_amap_api_maps_model_BuildingOverlayOptions>>> getCustomOptions_batch() async {
+
+  Future<List<List<com_amap_api_maps_model_BuildingOverlayOptions>>>
+      getCustomOptions_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::getCustomOptions_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BuildingOverlay::getCustomOptions_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_maps_model_BuildingOverlayOptions()..refId = __it__).toList()).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => (__result__ as List)
+              .cast<String>()
+              .map((__it__) => com_amap_api_maps_model_BuildingOverlayOptions()
+                ..refId = __it__)
+              .toList())
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   Future<List<void>> destroy_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::destroy_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BuildingOverlay::destroy_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   Future<List<String>> getId_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::getId_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.model.BuildingOverlay::getId_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   Future<List<void>> setZIndex_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::setZIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BuildingOverlay::setZIndex_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++)
+        {"var1": var1[__i__], "__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   Future<List<double>> getZIndex_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::getZIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BuildingOverlay::getZIndex_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<double>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   Future<List<void>> setVisible_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::setVisible_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BuildingOverlay::setVisible_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++)
+        {"var1": var1[__i__], "__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   Future<List<bool>> isVisible_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BuildingOverlay::isVisible_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BuildingOverlay::isVisible_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<bool>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
+
   //endregion
 }

@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-class com_amap_api_maps_AMapUtils extends java_lang_Object  {
+class com_amap_api_maps_AMapUtils extends java_lang_Object {
   //region constants
   static const String name__ = 'com.amap.api.maps.AMapUtils';
 
@@ -38,46 +38,61 @@ class com_amap_api_maps_AMapUtils extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_maps_AMapUtils> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_AMapUtils__', );
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      'ObjectFactory::createcom_amap_api_maps_AMapUtils__',
+    );
     final object = com_amap_api_maps_AMapUtils()..refId = refId;
     return object;
   }
-  
-  static Future<List<com_amap_api_maps_AMapUtils>> create_batch__(int length) async {
+
+  static Future<List<com_amap_api_maps_AMapUtils>> create_batch__(
+      int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_AMapUtils__', {'length': length});
-  
-    final List<com_amap_api_maps_AMapUtils> typedResult = resultBatch.map((result) => com_amap_api_maps_AMapUtils()..refId = result).toList();
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::create_batchcom_amap_api_maps_AMapUtils__',
+            {'length': length});
+
+    final List<com_amap_api_maps_AMapUtils> typedResult = resultBatch
+        .map((result) => com_amap_api_maps_AMapUtils()..refId = result)
+        .toList();
     return typedResult;
   }
-  
+
   //endregion
 
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
-  static Future<double> calculateLineDistance(com_amap_api_maps_model_LatLng var0, com_amap_api_maps_model_LatLng var1) async {
+
+  static Future<double> calculateLineDistance(
+      com_amap_api_maps_model_LatLng var0,
+      com_amap_api_maps_model_LatLng var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.AMapUtils::calculateLineDistance([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.AMapUtils::calculateLineDistance([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::calculateLineDistance', {"var0": var0, "var1": var1});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.AMapUtils::calculateLineDistance',
+            {"var0": var0, "var1": var1});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -86,21 +101,26 @@ class com_amap_api_maps_AMapUtils extends java_lang_Object  {
       return __return__;
     }
   }
-  
-  
-  static Future<double> calculateArea__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng(com_amap_api_maps_model_LatLng var0, com_amap_api_maps_model_LatLng var1) async {
+
+  static Future<double>
+      calculateArea__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng(
+          com_amap_api_maps_model_LatLng var0,
+          com_amap_api_maps_model_LatLng var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.AMapUtils::calculateArea([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.AMapUtils::calculateArea([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::calculateArea__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng', {"var0": var0, "var1": var1});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.AMapUtils::calculateArea__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng',
+            {"var0": var0, "var1": var1});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -109,21 +129,24 @@ class com_amap_api_maps_AMapUtils extends java_lang_Object  {
       return __return__;
     }
   }
-  
-  
-  static Future<double> calculateArea__List_com_amap_api_maps_model_LatLng_(List<com_amap_api_maps_model_LatLng> var0) async {
+
+  static Future<double> calculateArea__List_com_amap_api_maps_model_LatLng_(
+      List<com_amap_api_maps_model_LatLng> var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.AMapUtils::calculateArea([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.AMapUtils::calculateArea([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::calculateArea__List_com_amap_api_maps_model_LatLng_', {"var0": var0});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.AMapUtils::calculateArea__List_com_amap_api_maps_model_LatLng_',
+            {"var0": var0});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -132,21 +155,22 @@ class com_amap_api_maps_AMapUtils extends java_lang_Object  {
       return __return__;
     }
   }
-  
-  
+
   static Future<void> getLatestAMapApp(android_content_Context var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.AMapUtils::getLatestAMapApp([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.AMapUtils::getLatestAMapApp([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::getLatestAMapApp', {"var0": var0});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.AMapUtils::getLatestAMapApp', {"var0": var0});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -155,21 +179,23 @@ class com_amap_api_maps_AMapUtils extends java_lang_Object  {
       return __return__;
     }
   }
-  
-  
-  static Future<void> openAMapNavi(com_amap_api_maps_model_NaviPara var0, android_content_Context var1) async {
+
+  static Future<void> openAMapNavi(com_amap_api_maps_model_NaviPara var0,
+      android_content_Context var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.AMapUtils::openAMapNavi([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.AMapUtils::openAMapNavi([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::openAMapNavi', {"var0": var0, "var1": var1});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.AMapUtils::openAMapNavi',
+            {"var0": var0, "var1": var1});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -178,21 +204,24 @@ class com_amap_api_maps_AMapUtils extends java_lang_Object  {
       return __return__;
     }
   }
-  
-  
-  static Future<void> openAMapPoiNearbySearch(com_amap_api_maps_model_PoiPara var0, android_content_Context var1) async {
+
+  static Future<void> openAMapPoiNearbySearch(
+      com_amap_api_maps_model_PoiPara var0,
+      android_content_Context var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.AMapUtils::openAMapPoiNearbySearch([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.AMapUtils::openAMapPoiNearbySearch([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::openAMapPoiNearbySearch', {"var0": var0, "var1": var1});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.AMapUtils::openAMapPoiNearbySearch',
+            {"var0": var0, "var1": var1});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -201,21 +230,24 @@ class com_amap_api_maps_AMapUtils extends java_lang_Object  {
       return __return__;
     }
   }
-  
-  
-  static Future<void> openAMapDrivingRoute(com_amap_api_maps_model_RoutePara var0, android_content_Context var1) async {
+
+  static Future<void> openAMapDrivingRoute(
+      com_amap_api_maps_model_RoutePara var0,
+      android_content_Context var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.AMapUtils::openAMapDrivingRoute([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.AMapUtils::openAMapDrivingRoute([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::openAMapDrivingRoute', {"var0": var0, "var1": var1});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.AMapUtils::openAMapDrivingRoute',
+            {"var0": var0, "var1": var1});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -224,21 +256,24 @@ class com_amap_api_maps_AMapUtils extends java_lang_Object  {
       return __return__;
     }
   }
-  
-  
-  static Future<void> openAMapTransitRoute(com_amap_api_maps_model_RoutePara var0, android_content_Context var1) async {
+
+  static Future<void> openAMapTransitRoute(
+      com_amap_api_maps_model_RoutePara var0,
+      android_content_Context var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.AMapUtils::openAMapTransitRoute([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.AMapUtils::openAMapTransitRoute([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::openAMapTransitRoute', {"var0": var0, "var1": var1});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.AMapUtils::openAMapTransitRoute',
+            {"var0": var0, "var1": var1});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -247,21 +282,24 @@ class com_amap_api_maps_AMapUtils extends java_lang_Object  {
       return __return__;
     }
   }
-  
-  
-  static Future<void> openAMapWalkingRoute(com_amap_api_maps_model_RoutePara var0, android_content_Context var1) async {
+
+  static Future<void> openAMapWalkingRoute(
+      com_amap_api_maps_model_RoutePara var0,
+      android_content_Context var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.AMapUtils::openAMapWalkingRoute([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.AMapUtils::openAMapWalkingRoute([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::openAMapWalkingRoute', {"var0": var0, "var1": var1});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.AMapUtils::openAMapWalkingRoute',
+            {"var0": var0, "var1": var1});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -270,7 +308,7 @@ class com_amap_api_maps_AMapUtils extends java_lang_Object  {
       return __return__;
     }
   }
-  
+
   //endregion
 
   @override
@@ -279,186 +317,268 @@ class com_amap_api_maps_AMapUtils extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_maps_AMapUtils_Batch on List<com_amap_api_maps_AMapUtils> {
+extension com_amap_api_maps_AMapUtils_Batch
+    on List<com_amap_api_maps_AMapUtils> {
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
-  static Future<List<double>> calculateLineDistance_batch(List<com_amap_api_maps_model_LatLng> var0, List<com_amap_api_maps_model_LatLng> var1) async {
+
+  static Future<List<double>> calculateLineDistance_batch(
+      List<com_amap_api_maps_model_LatLng> var0,
+      List<com_amap_api_maps_model_LatLng> var1) async {
     if (var0.length != var1.length) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::calculateLineDistance_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.AMapUtils::calculateLineDistance_batch', [
+      for (int __i__ = 0; __i__ < var0.length; __i__++)
+        {"var0": var0[__i__], "var1": var1[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<double>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  static Future<List<double>> calculateArea__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng_batch(List<com_amap_api_maps_model_LatLng> var0, List<com_amap_api_maps_model_LatLng> var1) async {
+
+  static Future<List<double>>
+      calculateArea__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng_batch(
+          List<com_amap_api_maps_model_LatLng> var0,
+          List<com_amap_api_maps_model_LatLng> var1) async {
     if (var0.length != var1.length) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::calculateArea__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.AMapUtils::calculateArea__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng_batch',
+            [
+          for (int __i__ = 0; __i__ < var0.length; __i__++)
+            {"var0": var0[__i__], "var1": var1[__i__]}
+        ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<double>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  static Future<List<double>> calculateArea__List_com_amap_api_maps_model_LatLng__batch(List<List<com_amap_api_maps_model_LatLng>> var0) async {
+
+  static Future<List<double>>
+      calculateArea__List_com_amap_api_maps_model_LatLng__batch(
+          List<List<com_amap_api_maps_model_LatLng>> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::calculateArea__List_com_amap_api_maps_model_LatLng__batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.AMapUtils::calculateArea__List_com_amap_api_maps_model_LatLng__batch',
+            [
+          for (int __i__ = 0; __i__ < var0.length; __i__++)
+            {"var0": var0[__i__]}
+        ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<double>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  static Future<List<void>> getLatestAMapApp_batch(List<android_content_Context> var0) async {
+
+  static Future<List<void>> getLatestAMapApp_batch(
+      List<android_content_Context> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::getLatestAMapApp_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.AMapUtils::getLatestAMapApp_batch', [
+      for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  static Future<List<void>> openAMapNavi_batch(List<com_amap_api_maps_model_NaviPara> var0, List<android_content_Context> var1) async {
+
+  static Future<List<void>> openAMapNavi_batch(
+      List<com_amap_api_maps_model_NaviPara> var0,
+      List<android_content_Context> var1) async {
     if (var0.length != var1.length) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::openAMapNavi_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('com.amap.api.maps.AMapUtils::openAMapNavi_batch', [
+      for (int __i__ = 0; __i__ < var0.length; __i__++)
+        {"var0": var0[__i__], "var1": var1[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  static Future<List<void>> openAMapPoiNearbySearch_batch(List<com_amap_api_maps_model_PoiPara> var0, List<android_content_Context> var1) async {
+
+  static Future<List<void>> openAMapPoiNearbySearch_batch(
+      List<com_amap_api_maps_model_PoiPara> var0,
+      List<android_content_Context> var1) async {
     if (var0.length != var1.length) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::openAMapPoiNearbySearch_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.AMapUtils::openAMapPoiNearbySearch_batch', [
+      for (int __i__ = 0; __i__ < var0.length; __i__++)
+        {"var0": var0[__i__], "var1": var1[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  static Future<List<void>> openAMapDrivingRoute_batch(List<com_amap_api_maps_model_RoutePara> var0, List<android_content_Context> var1) async {
+
+  static Future<List<void>> openAMapDrivingRoute_batch(
+      List<com_amap_api_maps_model_RoutePara> var0,
+      List<android_content_Context> var1) async {
     if (var0.length != var1.length) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::openAMapDrivingRoute_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.AMapUtils::openAMapDrivingRoute_batch', [
+      for (int __i__ = 0; __i__ < var0.length; __i__++)
+        {"var0": var0[__i__], "var1": var1[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  static Future<List<void>> openAMapTransitRoute_batch(List<com_amap_api_maps_model_RoutePara> var0, List<android_content_Context> var1) async {
+
+  static Future<List<void>> openAMapTransitRoute_batch(
+      List<com_amap_api_maps_model_RoutePara> var0,
+      List<android_content_Context> var1) async {
     if (var0.length != var1.length) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::openAMapTransitRoute_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.AMapUtils::openAMapTransitRoute_batch', [
+      for (int __i__ = 0; __i__ < var0.length; __i__++)
+        {"var0": var0[__i__], "var1": var1[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  static Future<List<void>> openAMapWalkingRoute_batch(List<com_amap_api_maps_model_RoutePara> var0, List<android_content_Context> var1) async {
+
+  static Future<List<void>> openAMapWalkingRoute_batch(
+      List<com_amap_api_maps_model_RoutePara> var0,
+      List<android_content_Context> var1) async {
     if (var0.length != var1.length) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMapUtils::openAMapWalkingRoute_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.AMapUtils::openAMapWalkingRoute_batch', [
+      for (int __i__ = 0; __i__ < var0.length; __i__++)
+        {"var0": var0[__i__], "var1": var1[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => __result__)
+          .toList();
       return typedResult;
     }
   }
-  
+
   //endregion
 }

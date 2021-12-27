@@ -12,45 +12,54 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-class MAOfflineItemNationWide extends MAOfflineCity  {
+class MAOfflineItemNationWide extends MAOfflineCity {
   //region constants
   static const String name__ = 'MAOfflineItemNationWide';
 
   @override
   final String tag__ = 'amap_map_fluttify';
 
-  
   //endregion
 
   //region creators
-  static Future<MAOfflineItemNationWide> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAOfflineItemNationWide', {'init': init});
+  static Future<MAOfflineItemNationWide> create__(
+      {bool init = true /* ios only */}) async {
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::createMAOfflineItemNationWide', {'init': init});
     final object = MAOfflineItemNationWide()..refId = refId;
     return object;
   }
-  
-  static Future<List<MAOfflineItemNationWide>> create_batch__(int length, { bool init = true /* ios only */ }) async {
+
+  static Future<List<MAOfflineItemNationWide>> create_batch__(int length,
+      {bool init = true /* ios only */}) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAOfflineItemNationWide', {'length': length, 'init': init});
-  
-    final List<MAOfflineItemNationWide> typedResult = resultBatch.map((result) => MAOfflineItemNationWide()..refId = result).toList();
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('ObjectFactory::create_batchMAOfflineItemNationWide',
+            {'length': length, 'init': init});
+
+    final List<MAOfflineItemNationWide> typedResult = resultBatch
+        .map((result) => MAOfflineItemNationWide()..refId = result)
+        .toList();
     return typedResult;
   }
-  
+
   //endregion
 
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
+
   //endregion
 
   @override
@@ -61,14 +70,14 @@ class MAOfflineItemNationWide extends MAOfflineCity  {
 
 extension MAOfflineItemNationWide_Batch on List<MAOfflineItemNationWide> {
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
+
   //endregion
 }

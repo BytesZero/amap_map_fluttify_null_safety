@@ -12,7 +12,8 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-class com_amap_api_maps_model_HeatmapTileProvider extends java_lang_Object with com_amap_api_maps_model_TileProvider {
+class com_amap_api_maps_model_HeatmapTileProvider extends java_lang_Object
+    with com_amap_api_maps_model_TileProvider {
   //region constants
   static const String name__ = 'com.amap.api.maps.model.HeatmapTileProvider';
 
@@ -24,23 +25,30 @@ class com_amap_api_maps_model_HeatmapTileProvider extends java_lang_Object with 
   //endregion
 
   //region creators
-  
+
   //endregion
 
   //region getters
-  static Future<com_amap_api_maps_model_Gradient> get_static_DEFAULT_GRADIENT() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.HeatmapTileProvider::get_DEFAULT_GRADIENT", );
-    return __result__ == null ? null : (com_amap_api_maps_model_Gradient()..refId = __result__);
+  static Future<com_amap_api_maps_model_Gradient>
+      get_static_DEFAULT_GRADIENT() async {
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      "com.amap.api.maps.model.HeatmapTileProvider::get_DEFAULT_GRADIENT",
+    );
+    return __result__ == null
+        ? null
+        : (com_amap_api_maps_model_Gradient()..refId = __result__);
   }
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
+
   //endregion
 
   @override
@@ -49,22 +57,34 @@ class com_amap_api_maps_model_HeatmapTileProvider extends java_lang_Object with 
   }
 }
 
-extension com_amap_api_maps_model_HeatmapTileProvider_Batch on List<com_amap_api_maps_model_HeatmapTileProvider> {
+extension com_amap_api_maps_model_HeatmapTileProvider_Batch
+    on List<com_amap_api_maps_model_HeatmapTileProvider> {
   //region getters
-  Future<List<com_amap_api_maps_model_Gradient>> get_static_DEFAULT_GRADIENT_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.HeatmapTileProvider::get_DEFAULT_GRADIENT_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_Gradient()..refId = __result__).toList();
+  Future<List<com_amap_api_maps_model_Gradient>>
+      get_static_DEFAULT_GRADIENT_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            "com.amap.api.maps.model.HeatmapTileProvider::get_DEFAULT_GRADIENT_batch",
+            [
+          for (final __item__ in this) {'__this__': __item__}
+        ]);
+
+    final typedResult = (resultBatch as List)
+        .cast<String>()
+        .map((__result__) =>
+            com_amap_api_maps_model_Gradient()..refId = __result__)
+        .toList();
     return typedResult;
   }
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
+
   //endregion
 }

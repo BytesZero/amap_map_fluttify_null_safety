@@ -16,7 +16,8 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-typedef WearMapViewCreatedCallback = void Function(com_amap_api_maps_WearMapView controller);
+typedef WearMapViewCreatedCallback = void Function(
+    com_amap_api_maps_WearMapView controller);
 typedef _OnAndroidViewDispose = Future<void> Function();
 
 class com_amap_api_maps_WearMapView_Android extends StatefulWidget {
@@ -34,19 +35,22 @@ class com_amap_api_maps_WearMapView_Android extends StatefulWidget {
   final Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers;
 
   @override
-  _com_amap_api_maps_WearMapView_AndroidState createState() => _com_amap_api_maps_WearMapView_AndroidState();
+  _com_amap_api_maps_WearMapView_AndroidState createState() =>
+      _com_amap_api_maps_WearMapView_AndroidState();
 }
 
-class _com_amap_api_maps_WearMapView_AndroidState extends State<com_amap_api_maps_WearMapView_Android> {
+class _com_amap_api_maps_WearMapView_AndroidState
+    extends State<com_amap_api_maps_WearMapView_Android> {
   com_amap_api_maps_WearMapView _controller;
 
   @override
   Widget build(BuildContext context) {
-    final gestureRecognizers = widget.gestureRecognizers ?? <Factory<OneSequenceGestureRecognizer>>{
-      Factory<OneSequenceGestureRecognizer>(() => EagerGestureRecognizer()),
-    };
+    final gestureRecognizers = widget.gestureRecognizers ??
+        <Factory<OneSequenceGestureRecognizer>>{
+          Factory<OneSequenceGestureRecognizer>(() => EagerGestureRecognizer()),
+        };
 
-    final messageCodec = FluttifyMessageCodec('amap_map_fluttify');
+    final messageCodec = FluttifyMessageCodec(tag: 'amap_map_fluttify');
 
     // hybrid composition version.
     // PlatformViewLink(

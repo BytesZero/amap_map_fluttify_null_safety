@@ -16,7 +16,8 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-typedef MAAnnotationViewCreatedCallback = void Function(MAAnnotationView controller);
+typedef MAAnnotationViewCreatedCallback = void Function(
+    MAAnnotationView controller);
 typedef _OnUiKitViewDispose = Future<void> Function();
 
 class MAAnnotationView_iOS extends StatefulWidget {
@@ -42,11 +43,12 @@ class _MAAnnotationView_iOSState extends State<MAAnnotationView_iOS> {
 
   @override
   Widget build(BuildContext context) {
-    final gestureRecognizers = widget.gestureRecognizers ?? <Factory<OneSequenceGestureRecognizer>>{
-      Factory<OneSequenceGestureRecognizer>(() => EagerGestureRecognizer()),
-    };
+    final gestureRecognizers = widget.gestureRecognizers ??
+        <Factory<OneSequenceGestureRecognizer>>{
+          Factory<OneSequenceGestureRecognizer>(() => EagerGestureRecognizer()),
+        };
 
-    final messageCodec = FluttifyMessageCodec('amap_map_fluttify');
+    final messageCodec = FluttifyMessageCodec(tag: 'amap_map_fluttify');
     return UiKitView(
       viewType: 'me.yohom/MAAnnotationView',
       gestureRecognizers: gestureRecognizers,

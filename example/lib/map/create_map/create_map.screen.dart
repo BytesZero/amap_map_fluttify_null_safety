@@ -39,7 +39,6 @@ class _CreateMapScreenState extends State<CreateMapScreen> with NextLatLng {
           Flexible(
             child: DecoratedColumn(
               scrollable: true,
-              divider: kDividerZero,
               children: <Widget>[
                 BooleanSetting(
                   head: '是否显示定位',

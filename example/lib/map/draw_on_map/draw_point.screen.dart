@@ -60,7 +60,6 @@ class DrawPointScreenState extends State<DrawPointScreen> with NextLatLng {
           Flexible(
             child: DecoratedColumn(
               scrollable: true,
-              divider: kDividerTiny,
               children: <Widget>[
                 ListTile(
                   title: Center(child: Text('添加Widget Marker')),

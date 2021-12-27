@@ -12,45 +12,66 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-class com_amap_api_maps_model_animation_EmergeAnimation extends com_amap_api_maps_model_animation_Animation  {
+class com_amap_api_maps_model_animation_EmergeAnimation
+    extends com_amap_api_maps_model_animation_Animation {
   //region constants
-  static const String name__ = 'com.amap.api.maps.model.animation.EmergeAnimation';
+  static const String name__ =
+      'com.amap.api.maps.model.animation.EmergeAnimation';
 
   @override
   final String tag__ = 'amap_map_fluttify';
 
-  
   //endregion
 
   //region creators
-  static Future<com_amap_api_maps_model_animation_EmergeAnimation> create__com_amap_api_maps_model_LatLng(com_amap_api_maps_model_LatLng var1) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_animation_EmergeAnimation__com_amap_api_maps_model_LatLng', {"var1": var1});
-    final object = com_amap_api_maps_model_animation_EmergeAnimation()..refId = refId;
+  static Future<com_amap_api_maps_model_animation_EmergeAnimation>
+      create__com_amap_api_maps_model_LatLng(
+          com_amap_api_maps_model_LatLng var1) async {
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::createcom_amap_api_maps_model_animation_EmergeAnimation__com_amap_api_maps_model_LatLng',
+            {"var1": var1});
+    final object = com_amap_api_maps_model_animation_EmergeAnimation()
+      ..refId = refId;
     return object;
   }
-  
-  static Future<List<com_amap_api_maps_model_animation_EmergeAnimation>> create_batch__com_amap_api_maps_model_LatLng(List<com_amap_api_maps_model_LatLng> var1) async {
+
+  static Future<List<com_amap_api_maps_model_animation_EmergeAnimation>>
+      create_batch__com_amap_api_maps_model_LatLng(
+          List<com_amap_api_maps_model_LatLng> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_animation_EmergeAnimation__com_amap_api_maps_model_LatLng', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
-  
-    final List<com_amap_api_maps_model_animation_EmergeAnimation> typedResult = resultBatch.map((result) => com_amap_api_maps_model_animation_EmergeAnimation()..refId = result).toList();
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::create_batchcom_amap_api_maps_model_animation_EmergeAnimation__com_amap_api_maps_model_LatLng',
+            [
+          for (int __i__ = 0; __i__ < var1.length; __i__++)
+            {"var1": var1[__i__]}
+        ]);
+
+    final List<com_amap_api_maps_model_animation_EmergeAnimation> typedResult =
+        resultBatch
+            .map((result) => com_amap_api_maps_model_animation_EmergeAnimation()
+              ..refId = result)
+            .toList();
     return typedResult;
   }
-  
+
   //endregion
 
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
+
   //endregion
 
   @override
@@ -59,16 +80,17 @@ class com_amap_api_maps_model_animation_EmergeAnimation extends com_amap_api_map
   }
 }
 
-extension com_amap_api_maps_model_animation_EmergeAnimation_Batch on List<com_amap_api_maps_model_animation_EmergeAnimation> {
+extension com_amap_api_maps_model_animation_EmergeAnimation_Batch
+    on List<com_amap_api_maps_model_animation_EmergeAnimation> {
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
+
   //endregion
 }

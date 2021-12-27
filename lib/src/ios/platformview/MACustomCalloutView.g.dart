@@ -16,7 +16,8 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-typedef MACustomCalloutViewCreatedCallback = void Function(MACustomCalloutView controller);
+typedef MACustomCalloutViewCreatedCallback = void Function(
+    MACustomCalloutView controller);
 typedef _OnUiKitViewDispose = Future<void> Function();
 
 class MACustomCalloutView_iOS extends StatefulWidget {
@@ -34,7 +35,8 @@ class MACustomCalloutView_iOS extends StatefulWidget {
   final Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers;
 
   @override
-  _MACustomCalloutView_iOSState createState() => _MACustomCalloutView_iOSState();
+  _MACustomCalloutView_iOSState createState() =>
+      _MACustomCalloutView_iOSState();
 }
 
 class _MACustomCalloutView_iOSState extends State<MACustomCalloutView_iOS> {
@@ -42,11 +44,12 @@ class _MACustomCalloutView_iOSState extends State<MACustomCalloutView_iOS> {
 
   @override
   Widget build(BuildContext context) {
-    final gestureRecognizers = widget.gestureRecognizers ?? <Factory<OneSequenceGestureRecognizer>>{
-      Factory<OneSequenceGestureRecognizer>(() => EagerGestureRecognizer()),
-    };
+    final gestureRecognizers = widget.gestureRecognizers ??
+        <Factory<OneSequenceGestureRecognizer>>{
+          Factory<OneSequenceGestureRecognizer>(() => EagerGestureRecognizer()),
+        };
 
-    final messageCodec = FluttifyMessageCodec('amap_map_fluttify');
+    final messageCodec = FluttifyMessageCodec(tag: 'amap_map_fluttify');
     return UiKitView(
       viewType: 'me.yohom/MACustomCalloutView',
       gestureRecognizers: gestureRecognizers,

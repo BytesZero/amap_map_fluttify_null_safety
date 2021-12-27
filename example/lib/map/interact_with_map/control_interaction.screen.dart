@@ -34,7 +34,6 @@ class _ControlInteractionScreenState extends State<ControlInteractionScreen> {
           Flexible(
             child: DecoratedColumn(
               scrollable: true,
-              divider: kDividerZero,
               children: <Widget>[
                 BooleanSetting(
                   head: '是否显示缩放按钮',

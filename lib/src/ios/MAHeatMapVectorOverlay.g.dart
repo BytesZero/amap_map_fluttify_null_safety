@@ -19,60 +19,77 @@ class MAHeatMapVectorOverlay extends MAShape with MAOverlay, MAAnnotation {
   @override
   final String tag__ = 'amap_map_fluttify';
 
-  
   //endregion
 
   //region creators
-  static Future<MAHeatMapVectorOverlay> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAHeatMapVectorOverlay', {'init': init});
+  static Future<MAHeatMapVectorOverlay> create__(
+      {bool init = true /* ios only */}) async {
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::createMAHeatMapVectorOverlay', {'init': init});
     final object = MAHeatMapVectorOverlay()..refId = refId;
     return object;
   }
-  
-  static Future<List<MAHeatMapVectorOverlay>> create_batch__(int length, { bool init = true /* ios only */ }) async {
+
+  static Future<List<MAHeatMapVectorOverlay>> create_batch__(int length,
+      {bool init = true /* ios only */}) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAHeatMapVectorOverlay', {'length': length, 'init': init});
-  
-    final List<MAHeatMapVectorOverlay> typedResult = resultBatch.map((result) => MAHeatMapVectorOverlay()..refId = result).toList();
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('ObjectFactory::create_batchMAHeatMapVectorOverlay',
+            {'length': length, 'init': init});
+
+    final List<MAHeatMapVectorOverlay> typedResult = resultBatch
+        .map((result) => MAHeatMapVectorOverlay()..refId = result)
+        .toList();
     return typedResult;
   }
-  
+
   //endregion
 
   //region getters
   Future<MAHeatMapVectorOverlayOptions> get_option() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAHeatMapVectorOverlay::get_option", {'__this__': this});
-    return __result__ == null ? null : (MAHeatMapVectorOverlayOptions()..refId = __result__);
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod("MAHeatMapVectorOverlay::get_option", {'__this__': this});
+    return __result__ == null
+        ? null
+        : (MAHeatMapVectorOverlayOptions()..refId = __result__);
   }
-  
+
   //endregion
 
   //region setters
   Future<void> set_option(MAHeatMapVectorOverlayOptions option) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAHeatMapVectorOverlay::set_option', <String, dynamic>{'__this__': this, "option": option});
-  
-  
+    await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('MAHeatMapVectorOverlay::set_option',
+            <String, dynamic>{'__this__': this, "option": option});
   }
-  
+
   //endregion
 
   //region methods
-  
-  static Future<MAHeatMapVectorOverlay> heatMapOverlayWithOption(MAHeatMapVectorOverlayOptions option) async {
+
+  static Future<MAHeatMapVectorOverlay> heatMapOverlayWithOption(
+      MAHeatMapVectorOverlayOptions option) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: MAHeatMapVectorOverlay::heatMapOverlayWithOption([])');
+      debugPrint(
+          'fluttify-dart: MAHeatMapVectorOverlay::heatMapOverlayWithOption([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAHeatMapVectorOverlay::heatMapOverlayWithOption', {"option": option});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('MAHeatMapVectorOverlay::heatMapOverlayWithOption',
+            {"option": option});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -81,7 +98,7 @@ class MAHeatMapVectorOverlay extends MAShape with MAOverlay, MAAnnotation {
       return __return__;
     }
   }
-  
+
   //endregion
 
   @override
@@ -93,42 +110,63 @@ class MAHeatMapVectorOverlay extends MAShape with MAOverlay, MAAnnotation {
 extension MAHeatMapVectorOverlay_Batch on List<MAHeatMapVectorOverlay> {
   //region getters
   Future<List<MAHeatMapVectorOverlayOptions>> get_option_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAHeatMapVectorOverlay::get_option_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => MAHeatMapVectorOverlayOptions()..refId = __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod("MAHeatMapVectorOverlay::get_option_batch", [
+      for (final __item__ in this) {'__this__': __item__}
+    ]);
+
+    final typedResult = (resultBatch as List)
+        .cast<String>()
+        .map(
+            (__result__) => MAHeatMapVectorOverlayOptions()..refId = __result__)
+        .toList();
     return typedResult;
   }
-  
+
   //endregion
 
   //region setters
-  Future<void> set_option_batch(List<MAHeatMapVectorOverlayOptions> option) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('MAHeatMapVectorOverlay::set_option_batch', [for (int __i__ = 0; __i__ < length; __i__++) {'__this__': this[__i__], "option": option[__i__]}]);
-  
-  
+  Future<void> set_option_batch(
+      List<MAHeatMapVectorOverlayOptions> option) async {
+    await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('MAHeatMapVectorOverlay::set_option_batch', [
+      for (int __i__ = 0; __i__ < length; __i__++)
+        {'__this__': this[__i__], "option": option[__i__]}
+    ]);
   }
-  
+
   //endregion
 
   //region methods
-  
-  static Future<List<MAHeatMapVectorOverlay>> heatMapOverlayWithOption_batch(List<MAHeatMapVectorOverlayOptions> option) async {
+
+  static Future<List<MAHeatMapVectorOverlay>> heatMapOverlayWithOption_batch(
+      List<MAHeatMapVectorOverlayOptions> option) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAHeatMapVectorOverlay::heatMapOverlayWithOption_batch', [for (int __i__ = 0; __i__ < option.length; __i__++) {"option": option[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'MAHeatMapVectorOverlay::heatMapOverlayWithOption_batch', [
+      for (int __i__ = 0; __i__ < option.length; __i__++)
+        {"option": option[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => MAHeatMapVectorOverlay()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => MAHeatMapVectorOverlay()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
+
   //endregion
 }

@@ -12,291 +12,381 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-class com_amap_api_maps_model_BitmapDescriptorFactory extends java_lang_Object  {
+class com_amap_api_maps_model_BitmapDescriptorFactory extends java_lang_Object {
   //region constants
-  static const String name__ = 'com.amap.api.maps.model.BitmapDescriptorFactory';
+  static const String name__ =
+      'com.amap.api.maps.model.BitmapDescriptorFactory';
 
   @override
   final String tag__ = 'amap_map_fluttify';
 
-  
   //endregion
 
   //region creators
-  static Future<com_amap_api_maps_model_BitmapDescriptorFactory> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_BitmapDescriptorFactory__', );
-    final object = com_amap_api_maps_model_BitmapDescriptorFactory()..refId = refId;
+  static Future<com_amap_api_maps_model_BitmapDescriptorFactory>
+      create__() async {
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      'ObjectFactory::createcom_amap_api_maps_model_BitmapDescriptorFactory__',
+    );
+    final object = com_amap_api_maps_model_BitmapDescriptorFactory()
+      ..refId = refId;
     return object;
   }
-  
-  static Future<List<com_amap_api_maps_model_BitmapDescriptorFactory>> create_batch__(int length) async {
+
+  static Future<List<com_amap_api_maps_model_BitmapDescriptorFactory>>
+      create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_BitmapDescriptorFactory__', {'length': length});
-  
-    final List<com_amap_api_maps_model_BitmapDescriptorFactory> typedResult = resultBatch.map((result) => com_amap_api_maps_model_BitmapDescriptorFactory()..refId = result).toList();
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::create_batchcom_amap_api_maps_model_BitmapDescriptorFactory__',
+            {'length': length});
+
+    final List<com_amap_api_maps_model_BitmapDescriptorFactory> typedResult =
+        resultBatch
+            .map((result) => com_amap_api_maps_model_BitmapDescriptorFactory()
+              ..refId = result)
+            .toList();
     return typedResult;
   }
-  
+
   //endregion
 
   //region getters
   static Future<double> get_static_HUE_RED() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_RED", );
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_RED",
+    );
     return __result__ == null ? null : (__result__);
   }
-  
+
   static Future<double> get_static_HUE_ORANGE() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_ORANGE", );
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_ORANGE",
+    );
     return __result__ == null ? null : (__result__);
   }
-  
+
   static Future<double> get_static_HUE_YELLOW() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_YELLOW", );
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_YELLOW",
+    );
     return __result__ == null ? null : (__result__);
   }
-  
+
   static Future<double> get_static_HUE_GREEN() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_GREEN", );
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_GREEN",
+    );
     return __result__ == null ? null : (__result__);
   }
-  
+
   static Future<double> get_static_HUE_CYAN() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_CYAN", );
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_CYAN",
+    );
     return __result__ == null ? null : (__result__);
   }
-  
+
   static Future<double> get_static_HUE_AZURE() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_AZURE", );
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_AZURE",
+    );
     return __result__ == null ? null : (__result__);
   }
-  
+
   static Future<double> get_static_HUE_BLUE() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_BLUE", );
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_BLUE",
+    );
     return __result__ == null ? null : (__result__);
   }
-  
+
   static Future<double> get_static_HUE_VIOLET() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_VIOLET", );
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_VIOLET",
+    );
     return __result__ == null ? null : (__result__);
   }
-  
+
   static Future<double> get_static_HUE_MAGENTA() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_MAGENTA", );
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_MAGENTA",
+    );
     return __result__ == null ? null : (__result__);
   }
-  
+
   static Future<double> get_static_HUE_ROSE() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_ROSE", );
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_ROSE",
+    );
     return __result__ == null ? null : (__result__);
   }
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
-  static Future<com_amap_api_maps_model_BitmapDescriptor> fromResource(int var0) async {
+
+  static Future<com_amap_api_maps_model_BitmapDescriptor> fromResource(
+      int var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::fromResource([\'var0\':$var0])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::fromResource([\'var0\':$var0])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::fromResource', {"var0": var0});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BitmapDescriptorFactory::fromResource',
+            {"var0": var0});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_BitmapDescriptor()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_BitmapDescriptor()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
-  static Future<com_amap_api_maps_model_BitmapDescriptor> fromView(android_view_View var0) async {
+
+  static Future<com_amap_api_maps_model_BitmapDescriptor> fromView(
+      android_view_View var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::fromView([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::fromView([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::fromView', {"var0": var0});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BitmapDescriptorFactory::fromView',
+            {"var0": var0});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_BitmapDescriptor()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_BitmapDescriptor()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
-  static Future<com_amap_api_maps_model_BitmapDescriptor> fromPath(String var0) async {
+
+  static Future<com_amap_api_maps_model_BitmapDescriptor> fromPath(
+      String var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::fromPath([\'var0\':$var0])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::fromPath([\'var0\':$var0])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::fromPath', {"var0": var0});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BitmapDescriptorFactory::fromPath',
+            {"var0": var0});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_BitmapDescriptor()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_BitmapDescriptor()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
-  static Future<com_amap_api_maps_model_BitmapDescriptor> fromAsset(String var0) async {
+
+  static Future<com_amap_api_maps_model_BitmapDescriptor> fromAsset(
+      String var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::fromAsset([\'var0\':$var0])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::fromAsset([\'var0\':$var0])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::fromAsset', {"var0": var0});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BitmapDescriptorFactory::fromAsset',
+            {"var0": var0});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_BitmapDescriptor()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_BitmapDescriptor()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
-  static Future<com_amap_api_maps_model_BitmapDescriptor> fromFile(String var0) async {
+
+  static Future<com_amap_api_maps_model_BitmapDescriptor> fromFile(
+      String var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::fromFile([\'var0\':$var0])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::fromFile([\'var0\':$var0])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::fromFile', {"var0": var0});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BitmapDescriptorFactory::fromFile',
+            {"var0": var0});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_BitmapDescriptor()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_BitmapDescriptor()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
-  static Future<com_amap_api_maps_model_BitmapDescriptor> defaultMarker() async {
+
+  static Future<com_amap_api_maps_model_BitmapDescriptor>
+      defaultMarker() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::defaultMarker([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::defaultMarker([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::defaultMarker', );
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      'com.amap.api.maps.model.BitmapDescriptorFactory::defaultMarker',
+    );
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_BitmapDescriptor()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_BitmapDescriptor()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
-  static Future<com_amap_api_maps_model_BitmapDescriptor> defaultMarker__double(double var0) async {
+
+  static Future<com_amap_api_maps_model_BitmapDescriptor> defaultMarker__double(
+      double var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::defaultMarker([\'var0\':$var0])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::defaultMarker([\'var0\':$var0])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::defaultMarker__double', {"var0": var0});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BitmapDescriptorFactory::defaultMarker__double',
+            {"var0": var0});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_BitmapDescriptor()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_BitmapDescriptor()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
-  static Future<com_amap_api_maps_model_BitmapDescriptor> fromBitmap(android_graphics_Bitmap var0) async {
+
+  static Future<com_amap_api_maps_model_BitmapDescriptor> fromBitmap(
+      android_graphics_Bitmap var0) async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::fromBitmap([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::fromBitmap([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::fromBitmap', {"var0": var0});
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BitmapDescriptorFactory::fromBitmap',
+            {"var0": var0});
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_maps_model_BitmapDescriptor()..refId = __result__;
+      final __return__ = com_amap_api_maps_model_BitmapDescriptor()
+        ..refId = __result__;
       return __return__;
     }
   }
-  
-  
+
   static Future<android_content_Context> getContext() async {
     // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::getContext([])');
+      debugPrint(
+          'fluttify-dart: com.amap.api.maps.model.BitmapDescriptorFactory::getContext([])');
     }
-  
+
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::getContext', );
-  
-  
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      'com.amap.api.maps.model.BitmapDescriptorFactory::getContext',
+    );
+
     // handle native call
-  
-  
+
     // convert native result to dart side object
     if (__result__ == null) {
       return null;
@@ -305,7 +395,7 @@ class com_amap_api_maps_model_BitmapDescriptorFactory extends java_lang_Object  
       return __return__;
     }
   }
-  
+
   //endregion
 
   @override
@@ -314,255 +404,423 @@ class com_amap_api_maps_model_BitmapDescriptorFactory extends java_lang_Object  
   }
 }
 
-extension com_amap_api_maps_model_BitmapDescriptorFactory_Batch on List<com_amap_api_maps_model_BitmapDescriptorFactory> {
+extension com_amap_api_maps_model_BitmapDescriptorFactory_Batch
+    on List<com_amap_api_maps_model_BitmapDescriptorFactory> {
   //region getters
   Future<List<double>> get_static_HUE_RED_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_RED_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_RED_batch",
+            [
+          for (final __item__ in this) {'__this__': __item__}
+        ]);
+
+    final typedResult = (resultBatch as List)
+        .cast<double>()
+        .map((__result__) => __result__)
+        .toList();
     return typedResult;
   }
-  
+
   Future<List<double>> get_static_HUE_ORANGE_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_ORANGE_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_ORANGE_batch",
+            [
+          for (final __item__ in this) {'__this__': __item__}
+        ]);
+
+    final typedResult = (resultBatch as List)
+        .cast<double>()
+        .map((__result__) => __result__)
+        .toList();
     return typedResult;
   }
-  
+
   Future<List<double>> get_static_HUE_YELLOW_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_YELLOW_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_YELLOW_batch",
+            [
+          for (final __item__ in this) {'__this__': __item__}
+        ]);
+
+    final typedResult = (resultBatch as List)
+        .cast<double>()
+        .map((__result__) => __result__)
+        .toList();
     return typedResult;
   }
-  
+
   Future<List<double>> get_static_HUE_GREEN_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_GREEN_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_GREEN_batch",
+            [
+          for (final __item__ in this) {'__this__': __item__}
+        ]);
+
+    final typedResult = (resultBatch as List)
+        .cast<double>()
+        .map((__result__) => __result__)
+        .toList();
     return typedResult;
   }
-  
+
   Future<List<double>> get_static_HUE_CYAN_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_CYAN_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_CYAN_batch",
+            [
+          for (final __item__ in this) {'__this__': __item__}
+        ]);
+
+    final typedResult = (resultBatch as List)
+        .cast<double>()
+        .map((__result__) => __result__)
+        .toList();
     return typedResult;
   }
-  
+
   Future<List<double>> get_static_HUE_AZURE_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_AZURE_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_AZURE_batch",
+            [
+          for (final __item__ in this) {'__this__': __item__}
+        ]);
+
+    final typedResult = (resultBatch as List)
+        .cast<double>()
+        .map((__result__) => __result__)
+        .toList();
     return typedResult;
   }
-  
+
   Future<List<double>> get_static_HUE_BLUE_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_BLUE_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_BLUE_batch",
+            [
+          for (final __item__ in this) {'__this__': __item__}
+        ]);
+
+    final typedResult = (resultBatch as List)
+        .cast<double>()
+        .map((__result__) => __result__)
+        .toList();
     return typedResult;
   }
-  
+
   Future<List<double>> get_static_HUE_VIOLET_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_VIOLET_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_VIOLET_batch",
+            [
+          for (final __item__ in this) {'__this__': __item__}
+        ]);
+
+    final typedResult = (resultBatch as List)
+        .cast<double>()
+        .map((__result__) => __result__)
+        .toList();
     return typedResult;
   }
-  
+
   Future<List<double>> get_static_HUE_MAGENTA_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_MAGENTA_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_MAGENTA_batch",
+            [
+          for (final __item__ in this) {'__this__': __item__}
+        ]);
+
+    final typedResult = (resultBatch as List)
+        .cast<double>()
+        .map((__result__) => __result__)
+        .toList();
     return typedResult;
   }
-  
+
   Future<List<double>> get_static_HUE_ROSE_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_ROSE_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            "com.amap.api.maps.model.BitmapDescriptorFactory::get_HUE_ROSE_batch",
+            [
+          for (final __item__ in this) {'__this__': __item__}
+        ]);
+
+    final typedResult = (resultBatch as List)
+        .cast<double>()
+        .map((__result__) => __result__)
+        .toList();
     return typedResult;
   }
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
-  static Future<List<com_amap_api_maps_model_BitmapDescriptor>> fromResource_batch(List<int> var0) async {
+
+  static Future<List<com_amap_api_maps_model_BitmapDescriptor>>
+      fromResource_batch(List<int> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::fromResource_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BitmapDescriptorFactory::fromResource_batch',
+            [
+          for (int __i__ = 0; __i__ < var0.length; __i__++)
+            {"var0": var0[__i__]}
+        ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_BitmapDescriptor()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_BitmapDescriptor()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  static Future<List<com_amap_api_maps_model_BitmapDescriptor>> fromView_batch(List<android_view_View> var0) async {
+
+  static Future<List<com_amap_api_maps_model_BitmapDescriptor>> fromView_batch(
+      List<android_view_View> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::fromView_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BitmapDescriptorFactory::fromView_batch', [
+      for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_BitmapDescriptor()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_BitmapDescriptor()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  static Future<List<com_amap_api_maps_model_BitmapDescriptor>> fromPath_batch(List<String> var0) async {
+
+  static Future<List<com_amap_api_maps_model_BitmapDescriptor>> fromPath_batch(
+      List<String> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::fromPath_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BitmapDescriptorFactory::fromPath_batch', [
+      for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_BitmapDescriptor()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_BitmapDescriptor()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  static Future<List<com_amap_api_maps_model_BitmapDescriptor>> fromAsset_batch(List<String> var0) async {
+
+  static Future<List<com_amap_api_maps_model_BitmapDescriptor>> fromAsset_batch(
+      List<String> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::fromAsset_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BitmapDescriptorFactory::fromAsset_batch',
+            [
+          for (int __i__ = 0; __i__ < var0.length; __i__++)
+            {"var0": var0[__i__]}
+        ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_BitmapDescriptor()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_BitmapDescriptor()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  static Future<List<com_amap_api_maps_model_BitmapDescriptor>> fromFile_batch(List<String> var0) async {
+
+  static Future<List<com_amap_api_maps_model_BitmapDescriptor>> fromFile_batch(
+      List<String> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::fromFile_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BitmapDescriptorFactory::fromFile_batch', [
+      for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}
+    ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_BitmapDescriptor()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_BitmapDescriptor()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  static Future<List<com_amap_api_maps_model_BitmapDescriptor>> defaultMarker_batch() async {
+
+  static Future<List<com_amap_api_maps_model_BitmapDescriptor>>
+      defaultMarker_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::defaultMarker_batch', );
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      'com.amap.api.maps.model.BitmapDescriptorFactory::defaultMarker_batch',
+    );
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_BitmapDescriptor()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_BitmapDescriptor()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  static Future<List<com_amap_api_maps_model_BitmapDescriptor>> defaultMarker__double_batch(List<double> var0) async {
+
+  static Future<List<com_amap_api_maps_model_BitmapDescriptor>>
+      defaultMarker__double_batch(List<double> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::defaultMarker__double_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BitmapDescriptorFactory::defaultMarker__double_batch',
+            [
+          for (int __i__ = 0; __i__ < var0.length; __i__++)
+            {"var0": var0[__i__]}
+        ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_BitmapDescriptor()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_BitmapDescriptor()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
-  static Future<List<com_amap_api_maps_model_BitmapDescriptor>> fromBitmap_batch(List<android_graphics_Bitmap> var0) async {
+
+  static Future<List<com_amap_api_maps_model_BitmapDescriptor>>
+      fromBitmap_batch(List<android_graphics_Bitmap> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::fromBitmap_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'com.amap.api.maps.model.BitmapDescriptorFactory::fromBitmap_batch',
+            [
+          for (int __i__ = 0; __i__ < var0.length; __i__++)
+            {"var0": var0[__i__]}
+        ]);
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_BitmapDescriptor()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) =>
+              com_amap_api_maps_model_BitmapDescriptor()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
-  
+
   static Future<List<android_content_Context>> getContext_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-  
+
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.BitmapDescriptorFactory::getContext_batch', );
-  
-  
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+      'com.amap.api.maps.model.BitmapDescriptorFactory::getContext_batch',
+    );
+
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => android_content_Context()..refId = __result__).toList();
+      final typedResult = (resultBatch as List)
+          .cast<String>()
+          .map((__result__) => android_content_Context()..refId = __result__)
+          .toList();
       return typedResult;
     }
   }
-  
+
   //endregion
 }

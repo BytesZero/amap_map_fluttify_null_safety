@@ -19,38 +19,47 @@ class MAGeodesicPolyline extends MAPolyline with MAOverlay, MAAnnotation {
   @override
   final String tag__ = 'amap_map_fluttify';
 
-  
   //endregion
 
   //region creators
-  static Future<MAGeodesicPolyline> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAGeodesicPolyline', {'init': init});
+  static Future<MAGeodesicPolyline> create__(
+      {bool init = true /* ios only */}) async {
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod(
+            'ObjectFactory::createMAGeodesicPolyline', {'init': init});
     final object = MAGeodesicPolyline()..refId = refId;
     return object;
   }
-  
-  static Future<List<MAGeodesicPolyline>> create_batch__(int length, { bool init = true /* ios only */ }) async {
+
+  static Future<List<MAGeodesicPolyline>> create_batch__(int length,
+      {bool init = true /* ios only */}) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAGeodesicPolyline', {'length': length, 'init': init});
-  
-    final List<MAGeodesicPolyline> typedResult = resultBatch.map((result) => MAGeodesicPolyline()..refId = result).toList();
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify',
+            StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
+        .invokeMethod('ObjectFactory::create_batchMAGeodesicPolyline',
+            {'length': length, 'init': init});
+
+    final List<MAGeodesicPolyline> typedResult = resultBatch
+        .map((result) => MAGeodesicPolyline()..refId = result)
+        .toList();
     return typedResult;
   }
-  
+
   //endregion
 
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
+
   //endregion
 
   @override
@@ -61,14 +70,14 @@ class MAGeodesicPolyline extends MAPolyline with MAOverlay, MAAnnotation {
 
 extension MAGeodesicPolyline_Batch on List<MAGeodesicPolyline> {
   //region getters
-  
+
   //endregion
 
   //region setters
-  
+
   //endregion
 
   //region methods
-  
+
   //endregion
 }

@@ -32,7 +32,6 @@ class _DrawPolygonScreenState extends State<DrawPolygonScreen> with NextLatLng {
           ),
           Flexible(
             child: DecoratedColumn(
-              divider: kDividerTiny,
               children: <Widget>[
                 ListTile(
                   title: Center(child: Text('添加多边形')),
